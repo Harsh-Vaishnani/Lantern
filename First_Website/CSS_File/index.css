@@ -1,0 +1,292 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: Noto Serif Display
+  ;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  /* border-radius: 10px; */
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg , rgba(119, 153, 199, 0.669),rgba(0, 0, 255, 0.277) ); 
+  /* border-radius: 10px; */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(10, 24, 43, 0.377); 
+  transition: all 0.5s linear;
+}
+
+/* NavBar CSS Start */
+
+nav {
+  background-color: #0a182b;
+  height: auto;
+}
+ul {
+  padding-left: 0px !important;
+  margin-bottom: 10px !important;
+}
+.menu-header {
+  line-height: 100px;
+}
+.menu-header > ul > li {
+  list-style: none;
+  padding-inline: 5%;
+  font-size: 18px;
+}
+.header-buttons {
+  /* height: 100px; */
+  padding-top: 30px;
+  width: auto;
+}
+.brochure {
+  background-color: white;
+  width: 220px;
+  color: black;
+  height: 40px;
+}
+.register {
+  background-color: #c48e3d;
+  height: 40px;
+  color: white;
+  width: 220px;
+}
+
+/* Hero Section CSS Start */
+
+.hero-img > img {
+  object-fit: cover !important;
+  width: 100%;
+  height: 100vh;
+}
+.backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  top: 0;
+  left: 0;
+}
+.hero-content {
+  text-align: center;
+  position: absolute;
+  bottom: -6%;
+  color: white;
+  width: 100%;
+  height: auto;
+  padding-block: 1%;
+}
+
+/* About CSS Start */
+.city_img {
+  width: 100%;
+  height: 572px;
+  margin-top: 8%;
+}
+.city_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.city_header {
+  top: -7%;
+  left: 3%;
+}
+.city_content {
+  border: 2px solid black;
+  width: 50%;
+  height: auto;
+  bottom: -10%;
+  left: 48%;
+}
+.main_city_img_3 {
+  overflow: hidden;
+}
+
+/* Features CSS Start  */
+
+.features {
+  margin-top: 8%;
+  position: relative;
+}
+.features-h2 > h2 {
+  font-size: 44px;
+}
+.ccfs {
+  mix-blend-mode: difference;
+  color: white;
+}
+.city_Image_3 {
+  width: 80%;
+  height: 80vh;
+  object-fit: cover;
+  margin-top: 5%;
+}
+.ccp {
+  background-color: rgba(255, 255, 255, 0.372);
+}
+.features_text {
+  position: absolute;
+  top: 25%;
+  left: 12%;
+}
+.features_text_p {
+  position: absolute;
+  top: 45%;
+  font-size: 17px;
+  left: 1%;
+}
+
+.main_city_img_3{
+  overflow: hidden;
+}
+.main_city_img_3>img{
+  transition: all 0.3s linear;
+}
+.main_city_img_3 > img:hover {
+  transform: scale(1.05);
+}
+
+/* Revolution CSS Start */
+
+.revolution_section > img {
+  width: 80%;
+  height: 80vh;
+  object-fit: cover;
+  margin-top: 5%;
+}
+.revolution_h2 {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  mix-blend-mode: difference;
+  color: white;
+}
+.revolution_p {
+  position: absolute;
+  top: 40%;
+  right: 2%;
+  mix-blend-mode: difference;
+  color: white;
+}
+
+.revolution_section{
+  overflow: hidden;
+}
+.revolution_section>img{
+  transition: all 0.3s linear;
+}
+.revolution_section > img:hover {
+  transform: scale(1.05);
+}
+.bedroom_img > img {
+  width: 60%;
+  height: 60vh;
+  object-fit: cover;
+}
+
+.title {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.layout-options {
+  display: flex;
+  justify-content: space-around;
+}
+
+.layout-option {
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.bedroom_img {
+  width: 60%;
+  height: 100vh;
+  object-fit: cover;
+}
+.bedroom_h2 {
+  font-size: 50px;
+}
+.type_1 {
+  font-size: 35px;
+}
+.type_2 {
+  font-size: 35px;
+}
+
+.master_bedroom {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.gallery {
+  background-image: url("../Images/4th_Img.png");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  align-items: end;
+}
+.gallery_h2 {
+  font-size: 80px;
+  mix-blend-mode: difference;
+  color: white;
+  text-align: center;
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
+
+.footer_form {
+  width: 60%;
+  background-color: #0a182b;
+  height: 250px;
+}
+
+.form_name::placeholder{
+  padding-left: 20px;
+}
+.form_email::placeholder{
+  padding-left: 20px;
+}
+.form_text_areaA::placeholder{
+  padding-left: 20px;
+}
+.footer_register {
+  top: -15%;
+  left: 5%;
+  mix-blend-mode: difference;
+  color: white;
+}
+.form_name {
+  width: 45%;
+}
+.form_email {
+  width: 45%;
+}
+.form-btn {
+  padding-block: 3px;
+}
+
+

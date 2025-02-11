@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Page - No Copy</title>
+    <style>
+        body {
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        img {
+            pointer-events: none;
+        }
+    </style>
+    <script>
+        document.addEventListener('copy', (event) => { event.preventDefault(); alert("Copying is not allowed!"); });
+        document.addEventListener('cut', (event) => { event.preventDefault(); alert("Cutting is not allowed!"); });
+        document.addEventListener('paste', (event) => { event.preventDefault(); alert("Pasting is not allowed!"); });
+
+        document.addEventListener('contextmenu', function (event) {
+            event.preventDefault();
+            alert("Right-click is disabled!");
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.ctrlKey && (event.key === "c" || event.key === "x" || event.key === "u" || event.key === "s")) {
+                event.preventDefault();
+                alert("Sorry! You cannot copy this content.");
+            }
+            if (event.keyCode === 123) {
+                event.preventDefault();
+                alert("Inspect Element is disabled!");
+            }
+        });
+
+        (function () {
+            var devtools = /./;
+            devtools.toString = function () {
+                alert("Developer Console is disabled");
+                return "";
+            };
+            console.log("%c", devtools);
+        })();
+
+        document.addEventListener('dragstart', function (event) {
+            event.preventDefault();
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Secure Content Page</h1>
+    <h2>This page is fully protected. You cannot copy, cut, paste, or inspect the content.</h2>
+
+    <img src="https://cdn-icons-png.freepik.com/256/3963/3963671.png?semt=ais_hybrid" alt="Protected Image" style="width: 100px;">
+
+    <h3>Try pressing Ctrl + C, Ctrl + U, F12 or right-click to see the protection in action!</h3>
+</body>
+
+</html>

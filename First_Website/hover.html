@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hover_me{
+            width:50%;
+            height: 50vh;
+            border: 2px solid black;
+            overflow: hidden;
+        }
+        .hover_me>img{
+            width:100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.2s linear
+
+        }
+        .hover_me>img:hover{
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="hover_me">
+        <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg" alt="">
+    </div>
+
+
+</body>
+</html>

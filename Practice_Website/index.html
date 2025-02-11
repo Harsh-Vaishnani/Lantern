@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark and Light Mode</title>
+    <style>
+   
+        .main_btn {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 2%;
+        }
+
+        .main_btn>button {
+            padding-inline: 15px;
+            height: 40px;
+            border-radius: 20px;
+        }
+
+        .dark_mode {
+            background-color: black;
+            color: white;
+        }
+
+        .light_mode {
+            background-color: white;
+            color: black;
+        }
+        .custom_mode{
+            background-image: linear-gradient(90deg, lightblue,lightgreen,rgba(0, 0, 255, 0.265),lightblue);
+        }
+        body {
+            transition: 0.3s all linear;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        body {
+            height: auto !important;
+        }
+    </style>
+</head>
+
+<body class="main_body">
+    <div class="main_btn">
+        <button class="dark_btn">Dark Mode 🌚</button>
+        <button class="light_btn">Light Mode 🌞</button>
+        <button class="custom_btn">Custom Mode 🍮</button>
+    </div>
+    <h2 style="padding-inline: 3%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid incidunt provident
+        id iure accusantium voluptatum, minus nihil officia! Aperiam autem minima pariatur nemo. Quas atque magni, quae
+        enim tenetur alias quibusdam culpa et assumenda error consequatur debitis, quos soluta numquam laborum quia
+        voluptates eum hic a! Optio aut nulla maiores voluptas doloribus placeat facilis cupiditate inventore, ipsa
+        natus assumenda soluta, eum architecto repellat rem commodi. Sint dicta similique odio in dignissimos assumenda.
+    </h2>
+</body>
+
+</html>
+<script>
+    const dark_btn = document.querySelector(".dark_btn");
+    const light_btn = document.querySelector(".light_btn");
+    const custom_btn = document.querySelector(".custom_btn");
+    const main_body = document.body;
+
+    light_btn.style.display = "none";
+
+    dark_btn.addEventListener("click", () => {
+        main_body.classList.add("dark_mode");
+        main_body.classList.remove("light_mode");
+        dark_btn.style.display = "none";
+        light_btn.style.display = "block";
+
+        console.log("Dark Button Clicked");
+    });
+
+    light_btn.addEventListener("click", () => {
+        main_body.classList.add("light_mode");
+        main_body.classList.remove("dark_mode");
+        console.log("Light Button Clicked");
+        light_btn.style.display = "none";
+        dark_btn.style.display = "block";
+
+    });
+
+    custom_btn.addEventListener("click", ()=> {
+        main_body.classList.add("custom_mode");
+        // main_body.classList.remove("dark_mode");
+        main_body.classList.remove("light_mode");
+        console.log("Custom Button Clicked");
+        light_btn.style.display = "block";
+        dark_btn.style.display = "none";
+        custom_btn.style.display = "none";
+    })
+</script>

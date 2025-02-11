@@ -1,0 +1,428 @@
+@media (max-width: 375px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .cta-buttons a {
+    padding: 10px 20px;
+  }
+  .parent_hero_div {
+    display: block !important;
+  }
+  .hero-image {
+    text-align: center !important;
+    padding-top: 25px !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .hero-content h1 {
+    font-size: 24px;
+  }
+
+  .cta-buttons a {
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 991px) {
+  .about-section {
+    text-align: center;
+  }
+  .about-content-parent {
+    width: 100% !important;
+    margin-top: 30px;
+  }
+  .about-content {
+    margin-bottom: 30px;
+  }
+
+  .about-image img {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-card h4 {
+    font-size: 18px;
+  }
+
+  .feature-card p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 375px) {
+  .key-features .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-card {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .feature-card h4 {
+    font-size: 16px;
+  }
+
+  .feature-card p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-card {
+    padding: 15px;
+  }
+
+  .feature-card img {
+    width: 50px;
+  }
+
+  .feature-card h4 {
+    font-size: 16px;
+  }
+
+  .feature-card p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .play-btn,
+  .signup-btn {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .col-sm-6 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  .game-card {
+    padding: 15px;
+  }
+
+  .game-card h3 {
+    font-size: 18px;
+  }
+
+  .game-card p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 991px) {
+  .sport-betting-parent {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .btn-success {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  #join-tiranga {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  #join-tiranga h1 {
+    font-size: 28px;
+  }
+
+  #join-tiranga .lead {
+    font-size: 16px;
+  }
+
+  #join-tiranga h3 {
+    font-size: 20px;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .parent-Get-Started {
+    display: block;
+  }
+}
+
+@media (max-width: 1200px) {
+  .Started-Tiranga {
+    display: none;
+  }
+  .Started-Tiranga-2 {
+    width: 100%;
+  }
+  .Started-Tiranga-2 > h2 {
+    text-align: center;
+  }
+  .content-signup {
+    max-width: 600px;
+    width: 95% !important;
+    margin: 0 auto !important;
+  }
+}
+@media (max-width: 375px) {
+  .login-btn {
+    font-size: 18px !important;
+  }
+  .signup-btn {
+    font-size: 18px !important;
+  }
+  .hero-content h1 {
+    padding-top: 20px !important;
+  }
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .Popular-games {
+    width: 33% !important;
+  }
+  .main-popular-div {
+    justify-content: start !important;
+  }
+}
+
+@media (max-width: 476px) {
+  .cta-buttons > div {
+    display: block !important;
+  }
+  .cta-buttons > div > a {
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  .nav-menu {
+    display: block !important;
+  }
+  .logo {
+    text-align: center;
+    padding-bottom: 15px;
+  }
+  .hero-section {
+    padding-top: 115px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-content {
+    padding-top: 30px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: block !important;
+  }
+  .logo {
+    text-align: center;
+    padding-bottom: 12px;
+  }
+}
+
+@media (max-width: 769px) {
+  .parent_hero_div {
+    padding-top: 15%;
+  }
+}
+@media (max-width: 768px) {
+  .parent_hero_div {
+    padding-top: 25%;
+  }
+}
+
+@media (max-width: 415px) {
+  .parent_hero_div {
+    padding-top: 20%;
+  }
+}
+@media (max-width: 403px) {
+  .signup-btn {
+    padding: 10px !important;
+  }
+}
+@media (max-width: 1400px) {
+  .hero-section {
+    padding-top: 5%;
+  }
+}
+@media (max-width: 1200px) {
+  .hero-section {
+    padding-top: 12%;
+  }
+}
+@media (max-width: 600px) {
+  .hero-section {
+    padding-top: 25%;
+  }
+}
+
+@media (max-width: 401px) {
+  .hero-section {
+    padding-top: 30%;
+  }
+}
+@media (max-width: 425px) {
+  .step-p {
+    font-size: 18px !important;
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .parent-menu {
+    display: block !important;
+  }
+  .signup-btn {
+    margin: 0px !important;
+  }
+  .nav-buttons > a {
+    width: 50%;
+    margin-bottom: 15px;
+  }
+  .signup-btn::after {
+    content: " And Get ₹500 Bonus";
+    display: inline;
+  }
+  .cta-buttons {
+    display: none !important;
+  }
+  .join-register {
+    width: 100%;
+  }
+  .signup-btn {
+    width: 100% !important;
+    font-size: 18px !important;
+  }
+  .single-Play-btn {
+    width: 100% !important;
+  }
+  .sport-betting-parent {
+    width: 95% !important;
+    margin: auto;
+  }
+  .step-p {
+    font-size: 16px !important;
+  }
+  .hero-image {
+    padding-top: 0px !important;
+  }
+  .play-bet {
+    font-size: 30px !important;
+  }
+  .btn-play-now {
+    width: 100%;
+  }
+  .header-signup {
+    margin: 0px !important;
+  }
+  .logo > a > img {
+    width: 35% !important;
+  }
+}
+
+@media (max-width: 346px) {
+  .Sport-Betting {
+    font-size: 30px !important;
+  }
+}
+
+@media (max-width:1401px) and (min-width:1200px) {
+  .game-card-img-last>img{
+    width: 75px !important;
+  }
+}
+@media  (max-width:1200px) and (min-width:990px) {
+  .game-card-img-last>img{
+    width: 75px !important;
+  }
+  .game-card-img-last>div>h3{
+    font-size: 15px !important;
+  }
+  .game-card-img-card>img{
+    width: 75px !important;
+    
+  }
+  .game-card-img-card>div>h3{
+    font-size: 15px !important;
+    width: 75px !important;
+  }
+}
+@media (max-width:991px) and (min-width:767px){
+  .game-card-img-last>img{
+    width: 75px !important;
+  }
+
+  .game-card-img-card>img{
+    width: 75px !important;
+    
+  }
+  .game-card-img-card>div>h3{
+    width: 75px !important;
+  }
+}
+
+
+
+@media (max-width: 991px) {
+  .blog {
+    width: 100% !important;
+  }
+  .blog-container {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .common-blogs-mediaQuery {
+    display: block !important;
+  }
+  .common-logo-mediaQuery {
+    text-align: center;
+  }
+  .common-blog-mediaQuery {
+    width: 45% !important;
+  }
+  .common-parentbtn-mediaQuery {
+    justify-content: space-evenly !important;
+    padding-top: 10px !important;
+  }
+}

@@ -1,0 +1,202 @@
+
+
+@media screen and (max-width: 995px) {
+  .main-header {
+    display: block !important;
+  }
+  .header-buttons {
+    padding-block: 10px !important;
+    justify-content: space-around !important;
+  }
+  .main-section{
+    margin-top: 8% !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header-buttons {
+    display: block !important;
+  }
+  .register-btn {
+    margin-left: 0px !important;
+  }
+  .brochure-btn {
+    margin-right: 0px !important;
+    padding-bottom: 12px !important;
+  }
+  .brochure {
+    width: 100% !important;
+  }
+  .register {
+    width: 100% !important;
+  }
+  .menu-header > ul > li {
+    padding-inline: 2% !important;
+    font-size: 17px !important;
+  }
+  
+}
+@media screen and (max-width:900px) {
+  .main-section{
+    margin-top: 10% !important;
+  }
+}
+@media screen  and (max-width:691px) {
+  .main-section{
+    margin-top: 12% !important;
+  }
+}
+@media screen  and (max-width:581px) {
+  .main-section{
+    margin-top: 14% !important;
+  }
+}
+@media screen and (max-width:501px) {
+  .main-section{
+    margin-top: 30% !important;
+  }
+}
+
+@media screen and (max-width:401px) {
+  .main-section{
+    margin-top: 35% !important;
+  }
+}
+
+@media screen and (max-width:426px) {
+  .ccfs{
+    font-size: 40px !important;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .about_Project{
+    margin-top: 10% !important;
+  }
+  .city_content{
+    width: 55% !important;
+    left: 40% !important;
+  }
+}
+@media screen and (max-width:551px) {
+  .about_Project{
+    margin-top: 13% !important;
+  }
+}
+
+@media screen and (max-width:601px) {
+  .city_content{
+    width: 60% !important;
+    left: 30% !important;
+  }
+}
+
+@media screen and (max-width:544px) {
+  .city_content{
+    width: 100% !important;
+    left: 0% !important;
+  }
+}
+
+@media screen and (max-width:801px) {
+  .features{
+    margin-top:12% !important;
+  }
+}
+
+@media screen and (max-width:501px) {
+  .features{
+    margin-top:15% !important;
+  }
+}
+
+@media screen and (max-width:401px) {
+  .features{
+    margin-top:18% !important;
+  }
+  .features-h2{
+    text-align: center;
+  }
+}
+
+@media screen and (max-width:1025px) {
+  .bedroom_h2{
+    font-size: 40px !important;
+  }
+  .type_1{
+    font-size: 30px !important;
+  }
+  .type_2{
+    font-size: 30px !important;
+  }
+}
+
+@media screen and (max-width:910px) {
+  .bedroom_h2{
+    font-size: 35px !important;
+  }
+  .type_1{
+    font-size: 25px !important;
+  }
+  .type_2{
+    font-size: 25px !important;
+  }
+}
+
+@media screen and (max-width:851px) {
+  .main_bedroom_div{
+    display: block !important;
+  }
+  .bedroom_img{
+    width: 100% !important;
+  }
+  .bedroom_h2 {
+    text-align: center !important;
+    margin-block: 20px !important;
+  }
+}
+
+@media screen and (max-width:1001px) {
+  .main_ftr_sec{
+    display: block !important;
+    
+  }
+  .footer_form{
+    width: 100% !important;
+  }
+  .child_ftr_privacy{
+    text-align: center !important;
+  }
+  footer{
+    margin-top: 8% !important;
+  }
+  .footer_register {
+    top: -10% !important;
+  }
+}
+
+@media screen and (max-width:992px) {
+   .ftr_form_input{
+    display: block !important;
+   }
+   .form_name {
+    width: 100% !important;
+    margin-bottom: 15px !important;
+   }
+   .form_email{
+    width: 100% !important;
+   }
+   .my-4{
+    width: 100% !important;
+   }
+}
+@media screen and (max-width:561px) {
+  footer{
+    margin-top: 12% !important;
+  }
+}
+
+@media screen and (max-width:851px) {
+    .layout_slidebar>img{
+      width: 100% !important;
+    }
+}

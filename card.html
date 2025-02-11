@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Blog Card Filtering by ID (All Months)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .tabs {
+      margin-bottom: 20px;
+    }
+
+    .tab {
+      padding: 10px 20px;
+      border: none;
+      background-color: #ddd;
+      margin-right: 5px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .tab:hover {
+      background-color: #ccc;
+    }
+
+    .tab.active {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .blog-card {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Tabs for Filtering -->
+  <div class="tabs">
+    <button class="tab active" data-filter="all">ALL</button>
+    <button class="tab" data-filter="january">JANUARY</button>
+    <button class="tab" data-filter="february">FEBRUARY</button>
+    <button class="tab" data-filter="march">MARCH</button>
+    <button class="tab" data-filter="april">APRIL</button>
+    <button class="tab" data-filter="may">MAY</button>
+    <button class="tab" data-filter="june">JUNE</button>
+    <button class="tab" data-filter="july">JULY</button>
+    <button class="tab" data-filter="august">AUGUST</button>
+    <button class="tab" data-filter="september">SEPTEMBER</button>
+    <button class="tab" data-filter="october">OCTOBER</button>
+    <button class="tab" data-filter="november">NOVEMBER</button>
+    <button class="tab" data-filter="december">DECEMBER</button>
+  </div>
+
+  <!-- Blog Cards with ID containing the month name -->
+  <div class="blog-cards">
+    <div class="blog-card" id="january-1">
+      <h2>January Blog</h2>
+      <p>This is a blog card for January.</p>
+    </div>
+    <div class="blog-card" id="february-1">
+      <h2>February Blog</h2>
+      <p>This is a blog card for February.</p>
+    </div>
+    <div class="blog-card" id="march-1">
+      <h2>March Blog</h2>
+      <p>This is a blog card for March.</p>
+    </div>
+    <div class="blog-card" id="april-1">
+      <h2>April Blog</h2>
+      <p>This is a blog card for April.</p>
+    </div>
+    <div class="blog-card" id="may-1">
+      <h2>May Blog</h2>
+      <p>This is a blog card for May.</p>
+    </div>
+    <div class="blog-card" id="june-1">
+      <h2>June Blog</h2>
+      <p>This is a blog card for June.</p>
+    </div>
+    <div class="blog-card" id="july-1">
+      <h2>July Blog</h2>
+      <p>This is a blog card for July.</p>
+    </div>
+    <div class="blog-card" id="august-1">
+      <h2>August Blog</h2>
+      <p>This is a blog card for August.</p>
+    </div>
+    <div class="blog-card" id="september-1">
+      <h2>September Blog</h2>
+      <p>This is a blog card for September.</p>
+    </div>
+    <div class="blog-card" id="october-1">
+      <h2>October Blog</h2>
+      <p>This is a blog card for October.</p>
+    </div>
+    <div class="blog-card" id="november-1">
+      <h2>November Blog</h2>
+      <p>This is a blog card for November.</p>
+    </div>
+    <div class="blog-card" id="december-1">
+      <h2>December Blog</h2>
+      <p>This is a blog card for December.</p>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const tabs = document.querySelectorAll(".tab");
+      const cards = document.querySelectorAll(".blog-card");
+
+      tabs.forEach(tab => {
+        tab.addEventListener("click", function () {
+          const filter = this.getAttribute("data-filter");
+
+          tabs.forEach(t => t.classList.remove("active"));
+          this.classList.add("active");
+
+          cards.forEach(card => {
+            if (filter === "all") {
+              card.style.display = "block";
+            } else {
+              card.style.display = card.id.includes(filter) ? "block" : "none";
+            }
+          });
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>
