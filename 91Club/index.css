@@ -1,0 +1,2189 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Stolzl";
+  src: url("./Stolzl/stolzl_bold.otf") format("opentype");
+  font-weight: bold;
+  /* Bold version */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Stolzl";
+  src: url("./Stolzl/stolzl_light.otf") format("opentype");
+  font-weight: 300;
+  /* Light version */
+  font-style: normal;
+}
+
+body {
+  font-family: "Stolzl", sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #fff;
+  background-color: #010f20 !important;
+}
+
+h1 {
+  font-size: 33px !important;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 34px !important;
+  font-weight: 700;
+  color: #61a9fe !important;
+}
+
+h3 {
+  font-size: 21px !important;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 20px !important;
+  font-weight: 600;
+  color: white !important;
+}
+
+h5 {
+  font-size: 18px !important;
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 18px !important;
+  font-weight: 500;
+}
+
+p {
+  font-size: 18px !important;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+span {
+  font-weight: 500;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #ff9800, #ff5722);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #ff5722, #ff9800);
+  /* Hover effect */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #ff9800 #1a1a1a;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    245.84deg,
+    #ff0000dc 0.47%,
+    rgba(255, 255, 255, 0.721) 102.01%
+  );
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(245.84deg, #ff0000dc 0.47%, grey 102.01%);
+}
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+body {
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #ff0000db #f014144e;
+}
+
+/* Navbar */
+.navbar-container {
+  background: transparent;
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  position: fixed;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-container.scrolled {
+  background: rgba(30, 30, 30, 0.7);
+  /* Thoda transparent black */
+  backdrop-filter: blur(10px);
+  /* Blur effect */
+}
+
+.header-signup {
+  margin-left: 15px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.nav-buttons .btn {
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.login-btn {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  font-size: 22px;
+}
+
+.login-btn:hover {
+  background: white;
+  color: black;
+}
+
+.signup-btn {
+  background: linear-gradient(
+    260.94deg,
+    #61a9fe -0.98%,
+    #3892fb 97.66%
+  ) !important;
+  color: black;
+  font-size: 22px !important;
+  padding: 8px 15px !important;
+  /* margin-left: 15px; */
+}
+
+.signup-btn:hover {
+  background: linear-gradient(
+    260.94deg,
+    #4a94f5 -0.98%,
+    #1e7deb 97.66%
+  ) !important;
+  color: white;
+}
+
+/* Hero Section */
+
+.hero-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  z-index: 1;
+  background-color: rgba(211, 211, 211, 0.308);
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background-image: url("./Images/bigstock-Vibrant-Casino-Table-With-Roul-460650943.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+  z-index: -1;
+  filter: blur(3px);
+}
+
+.hero-content {
+  text-align: left;
+  max-width: 500px;
+  margin-right: 30px;
+}
+
+.hero-content h1 {
+  /* font-size: 36px; */
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.payment-box {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.payment-box:hover {
+  transform: scale(1.05);
+}
+
+.payment-box img {
+  width: 100%;
+  height: auto;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.payment-box p {
+  color: #000;
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.hero-content p {
+  /* font-size: 18px; */
+  margin-bottom: 20px;
+  color: white;
+}
+
+.cta-buttons a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px 25px;
+  margin: 10px 0;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-register {
+  background: linear-gradient(263.07deg, #ff9900 -8.54%, #ffd900 107.05%);
+
+  color: black;
+  width: 100%;
+  /* font-size: 22px; */
+  align-items: center;
+  display: grid !important;
+  transition: all 0.2s linear !important;
+}
+
+.btn-register:hover {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-login {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  width: 48%;
+  /* font-size: 22px; */
+  transition: all 0.2s linear !important;
+}
+
+.btn-login:hover {
+  background: white;
+  color: black;
+}
+
+.btn-bonus {
+  background: linear-gradient(260.94deg, #61a9fe -0.98%, #3892fb 97.66%);
+  color: white;
+  width: 76%;
+  /* font-size: 22px; */
+}
+
+.btn-bonus:hover {
+  background: linear-gradient(260.94deg, #4a94f5 -0.98%, #1e7deb 97.66%);
+}
+
+/* Hero Image */
+.hero-image {
+  justify-content: center;
+  display: flex;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 80px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-image: url("./Images/Logo-removebg-preview.png");
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 0, 0, 0.659);
+  display: inline-block;
+}
+
+/* About Section */
+.about-section {
+  position: relative;
+  color: #fff;
+  text-align: left;
+  padding: 30px 0px;
+  overflow: hidden;
+  background: linear-gradient(to left, #f1f2f5, lightgray 75%, white 100%);
+}
+
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./Images/faq.png");
+  background-size: right;
+  background-position: right;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  z-index: -1;
+  filter: blur(2px);
+}
+
+.section-title {
+  /* font-size: 36px; */
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+
+.section-title span {
+  color: white;
+  font-weight: bold;
+}
+
+.section-desc {
+  /* font-size: 18px; */
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+.btn-play-now {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(260.94deg, #61a9fe -0.98%, #3892fb 97.66%);
+  color: #fff;
+  /* font-size: 22px; */
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.single-Play-btn:hover {
+  background: transparent !important;
+  border: 2px solid white;
+}
+
+.single-Play-btn {
+  background: linear-gradient(263.07deg, #ff9900 -8.54%, #ffd900 107.05%);
+  font-weight: bold;
+}
+
+.single-Play-btn:hover {
+  background-color: transparent !important;
+}
+
+.btn-play-now:hover {
+  background: linear-gradient(260.94deg, #4a94f5 -0.98%, #1e7deb 97.66%);
+  transform: scale(1.05);
+}
+
+.about-image img {
+  width: 100%;
+  height: 70vh;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
+  transition: all 0.3s;
+  object-fit: cover;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Key Features Section */
+.key-features {
+  position: relative;
+  z-index: 1;
+  padding: 70px 0;
+  background: linear-gradient(to left, #f1f2f5, lightgray 75%, white 100%);
+}
+.key-features::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-image: url("./Images/download-2.webp"); */
+  /* background-image: url("./Images/wmremove-transformed.png"); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  z-index: -1;
+  filter: blur(5px);
+}
+.feature-card > h3 {
+  padding-top: 5px;
+}
+.feature-card {
+  background: #fb5b56;
+  /* background-image: linear-gradient(310deg,#FB5B56,#fb5c56a7,#fb5c5681); */
+  min-height: 380px !important;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: white;
+  text-align: center;
+  transition: all 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.feature-card:hover {
+  transform: translateY(-10px) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.feature-card h4 {
+  /* font-size: 20px; */
+  font-weight: bold;
+
+  color: white;
+  margin-bottom: 15px;
+}
+.feature-content {
+  padding-top: 5px;
+}
+.feature-card p {
+  /* font-size: 16px; */
+  line-height: 1.6;
+}
+
+.cricket-betting {
+  /* position: relative; */
+  /* padding: 50px 0; */
+  text-align: center;
+  /* background-color: rgba(245, 245, 245, 0.215); */
+  z-index: 1;
+}
+
+/* .cricket-betting::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./Images/blog-03-1536x484.jpg");
+  background-size: contain;
+  background-position: top;
+  opacity: 0.3;
+  z-index: -1;
+  filter: blur(15px);
+} */
+
+/* choose-tiranga CSS */
+
+.choose-tiranga {
+  position: relative;
+  padding: 60px 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.choose-tiranga::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://tirangagamesindia.in/wp-content/uploads/2025/02/download.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  z-index: -1;
+  filter: blur(2px);
+  animation: zoomRotate 20s infinite linear alternate;
+}
+
+@keyframes zoomRotate {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(5deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.choose-tiranga-card {
+  background: #b6bcc84e;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 250px;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  align-content: center;
+}
+
+.choose-tiranga-card:hover {
+  transform: translateY(-5px);
+}
+
+.choose-tiranga-card img {
+  width: 60px;
+  height: auto;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+}
+
+.choose-tiranga-card h4 {
+  /* font-size: 18px; */
+  font-weight: bold;
+  color: #ffcc00;
+  margin-bottom: 5px;
+}
+
+.choose-tiranga-card p {
+  /* font-size: 14px; */
+  color: #ddd;
+}
+
+.join-tiranga {
+  text-align: center;
+  padding: 40px 0;
+}
+#join-tiranga {
+  position: relative;
+  padding: 50px 0;
+  z-index: 1;
+}
+
+#join-tiranga::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./Images/homeimg1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  z-index: -1;
+  filter: blur(13px);
+}
+
+#faq-section {
+  position: relative;
+  padding: 30px 0;
+  z-index: 1;
+  background: linear-gradient(to left, #f1f2f5, lightgray 75%, white 100%);
+}
+
+/* #faq-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./Images/homebg3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  backdrop-filter: blur(3px);
+  z-index: -1;
+  filter: blur(3px);
+} */
+
+.play-btn,
+.signup-btn {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.play-btn {
+  background: black;
+  color: white;
+  padding: 12px 20px;
+  /* font-size: 25px; */
+  width: 100%;
+  border: 2px solid white;
+}
+
+.signup-btn {
+  background: #ff0000;
+  color: #fff;
+  padding: 15px 25px;
+  width: 100%;
+}
+
+.signup-bonus {
+  /* font-size: 25px !important; */
+}
+
+.play-btn:hover {
+  background: white;
+  color: black;
+}
+
+.signup-btn:hover {
+  background: #cc0000;
+}
+
+.combo-btn {
+  width: 100%;
+  padding-top: 5%;
+}
+
+.combo-btn-1 {
+  width: 100% !important;
+}
+
+.game-cards {
+  /* position: relative; */
+  padding: 20px 0;
+  text-align: center;
+  /* background-color: rgba(245, 245, 245, 0.215); */
+  z-index: 1;
+}
+
+/* .game-cards::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./Images/blog-03-1536x484.jpg");
+  background-size: contain;
+  background-position: top;
+  opacity: 0.3;
+  z-index: -1;
+  filter: blur(15px);
+} */
+
+.game-card {
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  transition: all 0.3s linear, box-shadow 0.3s ease-in-out;
+  min-height: 140px;
+  position: relative;
+  overflow: hidden;
+}
+
+.game-card-1 {
+  background-image: url("https://tirangagamesindia.in/wp-content/uploads/2025/02/Mask-group-4.png");
+  width: 100% !important;
+  background-size: cover !important;
+}
+
+.game-card-2 {
+  background-image: url("https://tirangagamesindia.in/wp-content/uploads/2025/02/Mask-group-3.png");
+  background-size: cover !important;
+}
+
+.game-card-3 {
+  background-image: url("https://tirangagamesindia.in/wp-content/uploads/2025/02/Mask-group-2.png");
+  background-size: cover !important;
+}
+
+.game-card-4 {
+  background-image: url("https://tirangagamesindia.in/wp-content/uploads/2025/02/Mask-group-1.png");
+  background-size: cover !important;
+}
+
+.game-card-5 {
+  background-image: url("https://tirangagamesindia.in/wp-content/uploads/2025/02/Mask-group.png");
+  background-size: cover !important;
+}
+
+.game-card-6 {
+  background-image: url("https://tirangagamesindia.in/wp-content/uploads/2025/02/Mask-group-1-2.png");
+  background-size: cover !important;
+}
+
+.game-card-7 {
+  background-image: url("https://tirangagamesindia.in/wp-content/uploads/2025/02/Mask-group-2-1.png");
+  background-size: cover !important;
+}
+
+.game-card-8 {
+  background-image: url("https://tirangagamesindia.in/wp-content/uploads/2025/02/Mask-group-3-1.png");
+  background-size: cover !important;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+}
+
+.game-card h3 {
+  /* font-size: 22px; */
+  margin-bottom: 8px;
+  color: black;
+}
+
+.game-card p {
+  /* font-size: 14px; */
+  color: black;
+}
+
+/*.Popular-games {*/
+/*  width: 20%;*/
+/*}*/
+.game-card-img img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+.game-card-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.game-card-img img,
+.game-card h3 {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.game-card:hover .game-card-content {
+  visibility: visible;
+  opacity: 1;
+}
+
+.game-card:hover .game-card-img img,
+.game-card:hover .game-card h3 {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.game-card:hover .game-card-img h3,
+.game-card:hover .game-card h3 {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.hidden-content {
+  color: #ddd;
+  transition: all 0.3s linear !important;
+}
+
+.sport-betting-parent {
+  width: 49% !important;
+  border-radius: 20px;
+  min-height: 415px;
+  background: #f1f2f546;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+#contact-support h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#contact-support p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+#contact-support .btn {
+  padding: 15px 30px;
+  background-color: #007bff;
+  border-color: #007bff;
+  text-decoration: none;
+  border-radius: 50px;
+}
+
+#contact-support .btn:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+#play-now h3 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#play-now .btn {
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+#get-started {
+  border-radius: 10px;
+  position: relative;
+  padding: 50px 0;
+  z-index: 1;
+  background: linear-gradient(to left, #f1f2f5, lightgray 75%, white 100%);
+}
+
+/* #get-started::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./Images/—Pngtree—beautiful\ red\ and\ golden\ casino_1484216.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  z-index: -1;
+  filter: blur(7px);
+} */
+
+#get-started h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.steps-list {
+  list-style: none;
+  padding: 0;
+}
+
+.steps-list li {
+  margin-bottom: 10px;
+  color: #444;
+  display: flex;
+  align-items: center;
+}
+
+.steps-list li strong {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.register-btn {
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.bonus-text {
+  font-weight: bold;
+  margin: 20px 0;
+  color: #28a745;
+}
+
+.btn-success {
+  background: #28a745;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.btn-success:hover {
+  background: #218838;
+}
+
+.Started-Tiranga {
+  width: 40% !important;
+  margin: auto;
+}
+.Started-Tiranga-2 {
+  width: 60%;
+}
+#join-tiranga {
+  height: auto;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+#join-tiranga h1 {
+  margin-bottom: 15px;
+}
+
+#join-tiranga .lead {
+  margin-bottom: 10px;
+}
+
+#join-tiranga h3 {
+  margin: 15px 0;
+}
+
+.bonus-text {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background: #ff9800;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: #e68900;
+}
+
+.according-btn-que {
+  font-weight: bold;
+}
+
+.blog-btn {
+  background: linear-gradient(263.07deg, #ff9900 -8.54%, #ffd900 107.05%);
+  color: black;
+}
+
+.blog-btn:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.footer {
+  position: relative;
+  padding: 60px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+/* Background Blur Effect */
+.footer::before {
+  background: url("./Images/second_img.jpg");
+  background-size: cover;
+  filter: blur(20px);
+  opacity: 0.5;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  animation: zoomEffect 10s infinite alternate linear;
+}
+@keyframes zoomEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Footer Content */
+.footer-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: auto;
+}
+
+.footer-logo img {
+  max-width: 150px;
+}
+
+.footer p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.footer a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.Start_Playing:hover {
+  background-color: white !important;
+}
+
+@media (max-width: 768px) {
+  .parent-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #1d2b64;
+    /* Change as per your theme */
+    z-index: 1050;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-buttons,
+  .header-signup {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .nav-buttons a,
+  .header-signup a {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .navbar-container {
+    background: transparent;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    position: fixed;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar-container.scrolled {
+    background: transparent;
+    backdrop-filter: blur(0px);
+  }
+
+  .nav-india {
+    background: rgba(30, 30, 30, 0.7);
+    /* Thoda transparent black */
+    backdrop-filter: blur(10px);
+    /* Blur effect */
+    position: static !important;
+  }
+
+  .logo {
+    background: rgba(30, 30, 30, 0.7);
+    /* Thoda transparent black */
+    backdrop-filter: blur(10px);
+    /* Blur effect */
+    padding-top: 20px;
+    position: static !important;
+  }
+
+  .navbar-container {
+    padding: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  .nav-india {
+    text-align: center;
+    position: static;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .cta-buttons a {
+    padding: 10px 20px;
+  }
+
+  .parent_hero_div {
+    display: block !important;
+  }
+
+  .hero-image {
+    text-align: center !important;
+    padding-top: 25px !important;
+  }
+
+  .nav-menu {
+    display: block !important;
+    padding: 0px;
+  }
+
+  .row {
+    flex-direction: row !important;
+    text-align: center;
+  }
+
+  .game-card {
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 0.3s linear, box-shadow 0.3s ease-in-out;
+    min-height: 90px !important;
+  }
+
+  .game-card-img img {
+    height: 60px !important;
+  }
+
+  .mb-4 {
+    margin-bottom: 1.5rem !important;
+    padding: 3px !important;
+  }
+
+  h3 {
+    font-size: 12px !important;
+    padding-top: 3px;
+  }
+
+  .game-card-img.d-flex {
+    flex-direction: column;
+  }
+
+  p.hidden-content {
+    font-size: 12px !important;
+    display: none !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .hero-content h1 {
+    font-size: 24px;
+  }
+
+  .cta-buttons a {
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 991px) {
+  .about-section {
+    text-align: center;
+  }
+
+  .about-content-parent {
+    width: 100% !important;
+    margin-top: 30px;
+  }
+
+  .about-content {
+    margin-bottom: 30px;
+  }
+
+  .about-image img {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-card h4 {
+    font-size: 18px;
+  }
+
+  .feature-card p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 375px) {
+  .key-features .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-card {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .feature-card h4 {
+    font-size: 16px;
+  }
+
+  .feature-card p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-card {
+    padding: 15px;
+  }
+
+  .feature-card img {
+    width: 50px;
+  }
+
+  .feature-card h4 {
+    font-size: 16px;
+  }
+
+  .feature-card p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .play-btn,
+  .signup-btn {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .col-sm-6 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  .game-card {
+    padding: 15px;
+  }
+
+  .game-card h3 {
+    font-size: 18px;
+  }
+
+  .game-card p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 991px) {
+  .sport-betting-parent {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .btn-success {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  #join-tiranga {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  #join-tiranga h1 {
+    font-size: 28px;
+  }
+
+  #join-tiranga .lead {
+    font-size: 16px;
+  }
+
+  #join-tiranga h3 {
+    font-size: 20px;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .parent-Get-Started {
+    display: block;
+  }
+}
+
+@media (max-width: 1200px) {
+  .Started-Tiranga {
+    display: none;
+  }
+
+  .Started-Tiranga-2 {
+    width: 100%;
+  }
+
+  .Started-Tiranga-2 > h2 {
+    text-align: center;
+  }
+
+  .content-signup {
+    max-width: 600px;
+    width: 95% !important;
+    margin: 0 auto !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .login-btn {
+    font-size: 18px !important;
+  }
+
+  .signup-btn {
+    font-size: 18px !important;
+  }
+
+  .hero-content h1 {
+    padding-top: 20px !important;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .Popular-games {
+    width: 33% !important;
+  }
+
+  .main-popular-div {
+    justify-content: start !important;
+  }
+}
+
+@media (max-width: 476px) {
+  .cta-buttons > div {
+    display: block !important;
+  }
+
+  .cta-buttons > div > a {
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  .nav-menu {
+    display: block !important;
+  }
+
+  .logo {
+    text-align: center;
+    padding-bottom: 15px;
+  }
+
+  .hero-section {
+    padding-top: 115px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-content {
+    padding-top: 30px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: block !important;
+  }
+
+  .logo {
+    text-align: center;
+    padding-bottom: 12px;
+  }
+}
+
+@media (max-width: 769px) {
+  .parent_hero_div {
+    padding-top: 15%;
+  }
+}
+
+@media (max-width: 768px) {
+  .parent_hero_div {
+    padding-top: 0%;
+  }
+}
+
+@media (max-width: 415px) {
+  .parent_hero_div {
+    padding-top: 0%;
+  }
+}
+
+@media (max-width: 403px) {
+  .signup-btn {
+    padding: 10px !important;
+  }
+}
+
+@media (max-width: 1400px) {
+  .hero-section {
+    padding-top: 5%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero-section {
+    padding-top: 12%;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-section {
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 401px) {
+  .hero-section {
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 425px) {
+  .step-p {
+    font-size: 18px !important;
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .parent-menu {
+    display: block !important;
+  }
+
+  .signup-btn {
+    margin: 0px !important;
+  }
+
+  .nav-buttons > a {
+    width: 50%;
+    margin-bottom: 15px;
+  }
+
+  .signup-btn::after {
+    content: " And Get ₹500 Bonus";
+    display: inline;
+  }
+
+  .cta-buttons {
+    display: none !important;
+  }
+
+  .join-register {
+    width: 100%;
+  }
+
+  .signup-btn {
+    width: 100% !important;
+    font-size: 18px !important;
+  }
+
+  .single-Play-btn {
+    width: 100% !important;
+  }
+
+  .sport-betting-parent {
+    width: 95% !important;
+    margin: auto;
+  }
+
+  .step-p {
+    font-size: 16px !important;
+  }
+
+  .hero-image {
+    padding-top: 0px !important;
+  }
+
+  .play-bet {
+    font-size: 30px !important;
+  }
+
+  .btn-play-now {
+    width: 100%;
+  }
+
+  .header-signup {
+    margin: 0px !important;
+  }
+
+  .logo > a > img {
+    width: 35% !important;
+  }
+}
+
+@media (max-width: 346px) {
+  .Sport-Betting {
+    font-size: 30px !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+/*@media (max-width:1200px) {*/
+/*  .banner{*/
+/*    display: block  !important;*/
+/*  }*/
+/*}*/
+@media (max-width: 1400px) {
+  .nav-india > img {
+    width: 50px !important;
+  }
+}
+
+/*@media (max-width:1201px) {*/
+/*  .nav-india{*/
+/*    display: none !important;*/
+/*  }*/
+/*}*/
+
+/* Desktop Navbar */
+.navbar-container {
+  background: transparent;
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-container.scrolled {
+  background: rgba(30, 30, 30, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+.header-signup {
+  margin-left: 15px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.nav-buttons .btn {
+  text-decoration: none;
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.login-btn {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  font-size: 22px;
+}
+
+.login-btn:hover {
+  background: white;
+  color: black;
+}
+
+.signup-btn {
+  background: linear-gradient(
+    260.94deg,
+    #61a9fe -0.98%,
+    #3892fb 97.66%
+  ) !important;
+  color: black;
+  font-size: 22px !important;
+  padding: 8px 15px !important;
+  margin-left: 10px;
+}
+
+.signup-btn:hover {
+  background: linear-gradient(
+    260.94deg,
+    #4a94f5 -0.98%,
+    #1e7deb 97.66%
+  ) !important;
+  color: white;
+}
+
+/* Mobile-Specific Styling */
+@media (max-width: 768px) {
+  .navbar-container {
+    position: relative !important;
+    /* Removes sticky behavior */
+    background: transparent;
+    padding: 15px 0;
+  }
+
+  .logo,
+  .nav-india {
+    position: static !important;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-india img {
+    display: inline-block;
+    margin: 0 auto;
+  }
+
+  /* Sticky Bottom Navigation */
+  .mobile-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(30, 30, 30, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+  }
+
+  .mobile-menu .btn {
+    padding: 8px 12px;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+
+  .flip-clock-wrapper ul li a div div.inn {
+    font-size: 40px;
+  }
+}
+
+.hero-login-btn {
+  background-color: white !important;
+  border: 2px solid transparent !important;
+  transition: all 0.2s linear !important;
+  color: black !important;
+}
+.hero-login-btn:hover {
+  background-color: transparent !important;
+  color: white !important;
+  border: 2px solid white !important;
+}
+.hero-signup-btn {
+  background: white !important;
+  border: 2px solid transparent !important;
+  transition: all 0.2s linear !important;
+  color: black !important;
+}
+.hero-signup-btn:hover {
+  background-color: transparent !important;
+  color: white !important;
+  border: 2px solid white !important;
+}
+
+.hdr-login-btn {
+  background: linear-gradient(
+    263.07deg,
+    #ff9900 -8.54%,
+    #ffd900 107.05%
+  ) !important;
+  border: 2px solid transparent !important;
+  transition: all 0.2s linear !important;
+  color: black !important;
+}
+.hdr-login-btn:hover {
+  background: transparent !important;
+  color: white !important;
+  border: 2px solid white !important;
+}
+
+.hdr-signup-btn {
+  background: white !important;
+  border: 2px solid transparent !important;
+  transition: all 0.2s linear !important;
+  color: black !important;
+  overflow: hidden !important;
+}
+.hdr-signup-btn:hover {
+  background: transparent !important;
+  color: white !important;
+  border: 2px solid white !important;
+}
+
+.about-91-text {
+  font-weight: bold;
+  background-image: url("./Images/Logo-removebg-preview.png");
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #fb5b56;
+  display: inline-block;
+}
+
+.fixed-bg {
+  width: 200px;
+  height: 200px;
+  background-image: url("./Images/download-3.webp");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  animation: zoomInOut 1.2s infinite alternate ease-in-out;
+  z-index: -1;
+  opacity: 0.9;
+}
+.fixed-bg-1 {
+  width: 170px;
+  height: 170px;
+  background-image: url("./Images/download-6.webp");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 40px;
+  left: 50px;
+  animation: zoomInOut 1.2s infinite alternate ease-in-out;
+  z-index: 111;
+}
+.fixed-bg-3 {
+  width: 170px;
+  height: 170px;
+  background-image: url("./Images/about-05-removebg-preview.png");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 40px;
+  left: 50px;
+  animation: zoomInOut 1.2s infinite alternate ease-in-out;
+  z-index: -1111;
+}
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.nowplay-btn {
+  border: 2px solid transparent;
+  transition: all 0.5s linear;
+}
+.nowplay-btn:hover {
+  border: 2px solid black;
+  color: black;
+}
+
+.play-now {
+  position: relative;
+  text-align: left;
+  padding: 20px 0 0px 0px;
+  overflow: hidden;
+  /* background: linear-gradient(to left, #f1f2f5, lightgray 75%, white 100%); */
+}
+
+/* .play-now::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./Images/faq.png");
+  background-size: right;
+  background-position: right;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: -1;
+  filter: blur(2px);
+} */
+
+.about-signup-btn {
+  background: #fb5b56 !important;
+  color: white !important;
+  transition: all 0.2s linear !important;
+  border: 2px solid transparent !important;
+}
+.about-signup-btn:hover {
+  background: transparent !important;
+  color: black !important;
+  border: 2px solid #fb5b56 !important;
+}
+
+.about-h2 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.227);
+}
+
+.prnt-games {
+  position: relative;
+  padding: 50px 0;
+  text-align: center;
+  background-color: rgba(245, 245, 245, 0.215);
+  z-index: 1;
+}
+
+.prnt-games::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./Images/blog-03-1536x484.jpg");
+  background-size: contain;
+  background-position: top;
+  opacity: 0.3;
+  z-index: -1;
+  filter: blur(15px);
+}
+
+.about-play-btn {
+  background: #fb5b56 !important;
+  color: white !important;
+  transition: all 0.2s linear !important;
+  border: 2px solid transparent;
+}
+.about-play-btn:hover {
+  border: 2px solid white;
+  color: white !important;
+  background: transparent !important;
+}
+
+.club-join-btn {
+  background-color: #fb5b56 !important;
+  color: white !important;
+  border: 2px solid transparent !important;
+  transition: all 0.2s linear !important;
+}
+.club-join-btn:hover {
+  background: transparent !important;
+  color: white !important;
+  border: 2px solid white !important;
+}
+
+.join-91-btn {
+  background: white !important;
+  color: black !important;
+  border: 2px solid transparent !important;
+  transition: all 0.2s linear !important;
+}
+.join-91-btn:hover {
+  background: transparent !important;
+  color: white !important;
+  border: 2px solid white !important;
+}
+
+.start-91-club {
+  background: #fb5b56 !important;
+  color: white !important;
+  border: 2px solid transparent !important;
+  transition: all 0.2s linear !important;
+}
+.start-91-club:hover {
+  background: transparent !important;
+  color: black !important;
+  border: 2px solid black !important;
+}
+
+.play-bet-btn {
+  background-color: #fb5b56 !important;
+  color: white !important;
+  border: 2px solid transparent !important;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out !important;
+  box-shadow: 0 4px 10px rgba(251, 91, 86, 0.5);
+}
+
+.play-bet-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.3) 10%,
+    transparent 50%
+  );
+  transition: all 0.6s ease-out;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.play-bet-btn:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.play-bet-btn:hover {
+  background: transparent !important;
+  color: white !important;
+  border: 2px solid white !important;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+.play-bet-btn:active {
+  transform: scale(0.95);
+}
+
+.acc-hdr-h3 {
+  background-color: #fb5b56 !important;
+  z-index: 111;
+  color: white !important;
+  --bs-accordion-active-bg: transparent;
+}
+.accordion-button {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+.accordion-button::after {
+  background-image: url("./Images/downARROW.svg");
+  background-size: contain;
+}
+
+.play-91-games {
+  gap: 25px;
+}
+.play-91-games > img {
+  width: 18%;
+}
+
+.play-91-games {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.flip-box {
+  width: 230px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-box-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in-out;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front,
+.flip-box-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.flip-box-back > h4 {
+  padding-inline: 5px;
+  font-size: 18px;
+}
+
+.flip-box-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.flip-box-back {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transform: rotateY(180deg);
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+  .fixed-bg-1 {
+    display: none;
+  }
+  .fixed-bg {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .flip-box {
+    width: 190px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 425px) {
+  .flip-box {
+    width: 135px;
+    height: 170px;
+  }
+}
+
+.modal-content {
+  gap: 5px;
+}
+.modal-dialog {
+  max-width: 55%;
+  margin: auto;
+}
+.flip-clock-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 991px) {
+  .modal-dialog {
+    max-width: 70%;
+    margin: auto;
+  }
+}
+@media (max-width: 768px) {
+  .modal-dialog {
+    max-width: 80%;
+    margin: auto;
+  }
+  .hero-page-h2 {
+    font-size: 25px !important;
+  }
+  .flip-clock-wrapper {
+    margin: 0px !important;
+  }
+  .modal-content {
+    gap: 10px;
+  }
+  .flip-clock-divider{
+    margin-right: 10px;
+  }
+  .flip-clock-divider .flip-clock-label{
+    right: -60px  !important;
+  }
+  .flip-clock-wrapper ul li a div div.inn{
+    font-size: 40px !important;
+  }
+  .hero-page-h2{
+    padding-top: 30px !important;
+  }
+  .modal-content{
+    padding: 10px !important;
+  }
+  .btn-close{
+    margin-top: 5px !important;
+  }
+  .feature-card>h3{
+    font-size: 20px !important;
+  }
+}
+
+@media (max-width:650px) {
+  .modal-dialog {
+    max-width: 90%;
+    margin: auto;
+  }
+}
+@media (max-width:650px) {
+  .modal-dialog {
+    max-width: 97%;
+    margin: auto;
+  }
+}
+
+

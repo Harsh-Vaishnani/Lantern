@@ -1,0 +1,1671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lantern Digital Quiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        .quiz-container {
+            /* margin: 50px auto; */
+            max-width: 1120px;
+            border-radius: 10px;
+            padding: 30px;
+            min-height: 100vh;
+            display: flex;
+        }
+
+        h2 {
+            color: #f3813c;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .form-control {
+            font-size: 1.2rem;
+            padding: 10px;
+        }
+
+        .options button {
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+            border: 2px solid #f5b692;
+            background-color: transparent;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+            padding: 10px 12px;
+            border-radius: 15px;
+            transition: all 0.3s;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .options button:hover {
+            background-color: #f5b692;
+            color: #fff;
+        }
+
+        .options button.selected {
+            background-color: #f3813c;
+            color: #fff;
+            border-color: #e36b2e;
+        }
+
+        .btn {
+            margin-top: 15px;
+        }
+
+        .d-none {
+            display: none !important;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        div#question0-section {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .intro-image {
+            max-width: 300px;
+        }
+
+        .btn {
+            margin-top: 15px;
+            width: 100%;
+            height: 50px;
+        }
+
+        .btn-primary {
+            --bs-btn-color: #fff;
+            --bs-btn-bg: #f3813c;
+            --bs-btn-border-color: #f3813c;
+            --bs-btn-hover-color: #fff;
+            --bs-btn-hover-bg: #f3813c;
+            --bs-btn-hover-border-color: #f3813c;
+        }
+
+        div#question1-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .row {
+            width: 100%;
+        }
+
+        div#question1b-section {
+            display: flex;
+        }
+
+        div#question3-section {
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        div#question4-section {
+            width: 100%;
+            display: flex;
+        }
+
+        div#question2-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        div#question2b-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        div#question5-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .last {
+            margin-top: 15px;
+            width: 9%;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .last-btn {
+            text-align: end;
+        }
+
+        p#result-text {
+            font-size: 24px;
+            line-height: 1.3;
+            text-align: left;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .top-heading.head {
+            color: #f3813c;
+            font-size: 60px;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .top-para {
+            font-family: "Poppins", sans-serif;
+            font-size: 30px;
+        }
+
+        .first {
+            margin-top: 15px;
+            width: 100%;
+            height: 70px;
+            border-radius: 20px;
+            width: 80%;
+        }
+
+        h2.second {
+            color: #fff;
+            margin-bottom: 0px;
+            font-size: 24px;
+        }
+
+        h2 {
+            font-size: 40px;
+        }
+
+        .btn2 {
+            width: 49%;
+            margin-top: 50px;
+        }
+
+        .list-unstyled {
+            padding-left: 0;
+            list-style: disc;
+        }
+
+        .mb-2 {
+            font-size: 20px;
+        }
+
+        ::marker {
+            color: #f3813c;
+        }
+
+        .life {
+            border-left: 1px solid #e36b2e;
+        }
+
+
+
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .top-heading.head {
+                font-size: 26px;
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            .top-para {
+                font-size: 20px;
+                text-align: center;
+            }
+
+            .first {
+                height: 50px;
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            h2.second {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .btn2 {
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            .mb-2 {
+                font-size: 16px;
+            }
+
+            .options button {
+                font-size: 20px;
+            }
+
+            .image-container {
+                width: 60%;
+            }
+        }
+
+
+        .frs-que{
+            flex-direction: row-reverse;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container quiz-container">
+        <!-- question 1 -->
+        <div id="question0-section">
+            <div class="row frs-que">
+                <div class="col-md-4">
+                    <div class="intro-image" style="max-width: 556px;">
+                        <img src="Inspo.png" alt="Woman Image" />
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="intro-text">
+                        <h1 class="top-heading head">
+                            Basic Information
+                        </h1>
+                        <p class="top-para">
+
+                        </p>
+
+                        <button class="btn btn-primary first" style="width: 50%"
+                            onclick="goToSection('question1-section')">
+                            <h2 class="second">Let’s Begin!</h2>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Question 1.1 -->
+        <div id="question1-section" class="d-none">
+            <div class="row align-items-center">
+
+                <div class="col-md-8">
+                    <div class="intro-text">
+                        <h1 class="top-heading head">
+                            Prefer Technology
+
+                        </h1>
+                        <p class="top-para">
+
+                        </p>
+                        <div class="options">
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Wordpress
+
+                            </button>
+                            <button data-score="5" onclick="selectOption(this, 'question2-image')">
+                                Shopify
+                            </button>
+                            <button data-score="20" onclick="selectOption(this, 'question2-image')">
+                                PHP
+                            </button>
+                            <button data-score="20" onclick="selectOption(this, 'question2-image')">
+                                React</button><button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                Wix </button>
+
+
+                        </div>
+                        <button class="btn btn-primary first" onclick="goToSection('question1a-section')">
+                            <h2 class="second">Next</h2>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="Inspo.png" alt="Sanitary Pad" class="image-container" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 1a -->
+        <div id="question1a-section" class="d-none">
+            <div class="row align-items-center frs-que">
+                <div class="col-md-4 text-center">
+                    <img src="Inspo.png" alt="Sanitary Pad" class="image-container" />
+                </div>
+                <div class="col-md-8">
+                    <div class="intro-text">
+                        <h1 class="top-heading head">
+                            Industry Type
+                        </h1>
+                        <p class="top-para">
+
+                        </p>
+                        <div class="options">
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Technology
+                            </button>
+                            <button data-score="5" onclick="selectOption(this, 'question2-image')">
+                                E-commerce
+                            </button>
+                            <button data-score="20" onclick="selectOption(this, 'question2-image')">
+                                Education
+                            </button>
+                            <button data-score="20" onclick="selectOption(this, 'question2-image')">
+                                Healthcare</button><button data-score="20"
+                                onclick="selectOption(this,  'question2-image')">
+                                Finance</button>
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                Entertainment</button>
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                B2B</button>
+                            <input type="text" placeholder="Other (Please specify)"
+                                style="border:2px solid #f5b692; border-radius: 15px; padding: 10px 12px; font-size: 22px; color: black; font-weight: bold; text-align: center; width:100% ;">
+
+                        </div>
+                        <button class="btn btn-primary first" onclick="goToSection('question1b-section')">
+                            <h2 class="second">Next</h2>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Question 1b -->
+        <div id="question1b-section" class="d-none">
+            <div class="row align-items-center">
+                <!-- <div class="col-md-4 text-center">
+          <img src="/asset/Asset 1.svg" alt="Sanitary Pad" class="image-container">
+        </div> -->
+                <div class="col-md-8">
+                    <div class="intro-text">
+                        <h1 class="top-heading head">
+                            Primary Purpose
+                        </h1>
+                        <p class="top-para">
+
+                        </p>
+                        <div class="options">
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Brand Awareness
+                            </button>
+                            <button data-score="5" onclick="selectOption(this, 'question2-image')">
+                                Lead Generation
+                            </button>
+                            <button data-score="20" onclick="selectOption(this, 'question2-image')">
+                                E-commerce
+                            </button>
+                            <button data-score="20" onclick="selectOption(this, 'question2-image')">
+                                Portfolio/Showcase</button><button data-score="20"
+                                onclick="selectOption(this,  'question2-image')">
+                                Informational</button>
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                Blog/Content</button>
+
+                            <input type="text" placeholder="Other (Please specify)"
+                                style="border:2px solid #f5b692; border-radius: 15px; padding: 10px 12px; font-size: 22px; color: black; font-weight: bold; text-align: center; width:100%">
+
+                        </div>
+                        <button class="btn btn-primary first" onclick="goToSection('question2-section')">
+                            <h2 class="second">Next</h2>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="Inspo.png" alt="Sanitary Pad" class="image-container" />
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Question 2 -->
+        <div id="question2-section" class="d-none">
+            <div class="row align-items-center frs-que">
+                <div class="col-md-4 text-center">
+                    <img src="Inspo.png" alt="Sanitary Pad" class="image-container" />
+                </div>
+                <div class="col-md-8">
+                    <div class="intro-text">
+                        <h1 class="top-heading head">
+                            Pages Selection
+                        </h1>
+                        <p class="top-para">
+
+                        </p>
+                    </div>
+                    <button class="btn btn-primary first" style="width: 50%;"
+                        onclick="goToSection('question2a-section')">
+                        <h2 class="second">Next</h2>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Question 2a -->
+        <div id="question2a-section" class="d-none">
+            <div class="row align-items-center frs-que">
+                <div class="col-md-4 text-center">
+                    <img src="Inspo.png" alt="Sanitary Pad" class="image-container" />
+                </div>
+                <div class="col-md-8">
+                    <div class="intro-text">
+                        <h1 class="top-heading head">
+                            Pages to Include - (Select all that apply)
+                        </h1>
+                        <p class="top-para">
+
+                        </p>
+                        <div class="options">
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Home
+                            </button>
+                            <button data-score="5" onclick="selectOption(this, 'question2-image')">
+                                About Us
+                            </button>
+                            <button data-score="20" onclick="selectOption(this, 'question2-image')">
+                                Services
+                            </button>
+                            <button data-score="20" onclick="selectOption(this, 'question2-image')">
+                                Product Listing</button><button data-score="20"
+                                onclick="selectOption(this,  'question2-image')">
+                                Product Detail</button>
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                Contact</button>
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                Blog Listing</button>
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                Blog Detail</button>
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                Portfolio</button>
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                Case Studies Listing</button>
+
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                Case Study Detail</button>
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                Careers</button>
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                Testimonials</button>
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                FAQ</button>
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                Pricing</button>
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                Privacy Policy</button>
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                Terms & Conditions</button>
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                Events</button>
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                Gallery</button>
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                Resources</button>
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                Press</button>
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                Team</button>
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                Partnerships</button>
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                Sitemap</button>
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                Client Portal</button>
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                Client </button>
+                            <input type="text" placeholder="Other (Please specify)"
+                                style="border:2px solid #f5b692; border-radius: 15px; padding: 10px 12px; font-size: 22px; color: black; font-weight: bold; text-align: center; width:685px ; margin-bottom: 15px;">
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                [Text Field for Custom Pages]</button>
+
+
+                        </div>
+                        <button class="btn btn-primary first" onclick="goToSection('question2b-section')">
+                            <h2 class="second">Next</h2>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Question 2b -->
+        <div id="question2b-section" class="d-none">
+            <div class="row align-items-center">
+
+                <div class="col-md-8">
+                    <div class="intro-text">
+                        <h1 class="top-heading head">
+                            Custom Page Requirements
+                        </h1>
+                        <p class="top-para">
+
+                        </p>
+                        <div class="options">
+
+                            <input type="text" id="customInput" placeholder="Enter custom text"
+                                style="display: none; margin-left: 10px;">
+                        </div>
+                        <button class="btn btn-primary first" onclick="goToSection('question3-section')">
+                            <h2 class="second">Next</h2>
+                        </button>
+
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="Inspo.png" alt="Sanitary Pad" class="image-container" />
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Question 3 -->
+        <div id="question3-section" class="d-none">
+            <div class="row align-items-center frs-que">
+                <div class="col-md-4 text-center">
+                    <img src="Inspo.png" alt="Sanitary Pad" class="image-container" />
+                </div>
+                <div class="col-md-8">
+                    <div class="intro-text">
+                        <h1 class="top-heading head">
+                            Page-Specific Modules
+                        </h1>
+                        <p class="top-para">
+
+                        </p>
+                    </div>
+                    <button class="btn btn-primary first" style="width: 50%;"
+                        onclick="goToSection('question3a-section')">
+                        <h2 class="second">Next</h2>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Question 3a -->
+        <div id="question3a-section" class="d-none">
+            <div class="row align-items-center frs-que">
+                <div class="col-md-4 text-center">
+                    <img src="Inspo.png" alt="Sanitary Pad" class="image-container" />
+                </div>
+                <div class="col-md-8">
+                    <div class="intro-text">
+                        <h1 class="top-heading head">
+                            Home Page
+                        </h1>
+                        <p class="top-para">
+                            Which components would you like to include on the Home Page?
+                        </p>
+                        <div class="options">
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Hero Section (large image/video)
+                            </button>
+                            <button data-score="5" onclick="selectOption(this, 'question2-image')">
+                                Welcome Message
+                            </button>
+                            <button data-score="20" onclick="selectOption(this, 'question2-image')">
+                                Services Overview
+                            </button>
+                            <button data-score="20" onclick="selectOption(this, 'question2-image')">
+                                Featured Products</button><button data-score="20"
+                                onclick="selectOption(this,  'question2-image')">
+                                Call-to-Action Button</button>
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                Latest Blog Posts</button>
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                Testimonials</button>
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                Featured Case Studies</button>
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                Newsletter Signup</button>
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                Social Media Links</button>
+
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                Brand Logos/Partnerships</button>
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                Interactive Slideshow</button>
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                Awards</button>
+                            <button data-score="20" onclick="selectOption(this,  'question2-image')">
+                                Map Location</button>
+                        </div>
+                        <button class="btn btn-primary first" onclick="goToSection('question3b-section')">
+                            <h2 class="second">Next</h2>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Question 3b -->
+        <div id="question3b-section" class="d-none">
+            <div class="row align-items-center">
+
+                <div class="col-md-8">
+                    <div class="intro-text">
+                        <h1 class="top-heading head">
+                            About Us Page
+                        </h1>
+                        <p class="top-para">
+                            Which components would you like on the About Us Page?
+                        </p>
+                        <div class="options">
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Company Story
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Mission & Vision Statement
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Team Bios
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Company Timeline
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Core Values
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Testimonials
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Call-to-Action
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Video Introduction - sales selector
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Social Responsibility Section
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Key Achievements/Stats
+                            </button>
+
+                        </div>
+                        <button class="btn btn-primary first" onclick="goToSection('question3c-section')">
+                            <h2 class="second">Next</h2>
+                        </button>
+
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="Inspo.png" alt="Sanitary Pad" class="image-container" />
+                </div>
+            </div>
+        </div>
+        <!-- Question 3c -->
+        <div id="question3c-section" class="d-none">
+            <div class="row align-items-center frs-que">
+
+
+                <div class="col-md-4 text-center">
+                    <img src="Inspo.png" alt="Sanitary Pad" class="image-container" />
+                </div>
+                <div class="col-md-8">
+                    <div class="intro-text">
+                        <h1 class="top-heading head">
+                            Product Listing Page
+                        </h1>
+                        <p class="top-para">
+                            Which elements would you like on the Product Listing Page?
+                        </p>
+                        <div class="options">
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Product Grid/Thumbnails
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Filter Options (by Category, Price, etc.)
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Search Bar
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Featured Products Section
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Sort by (Price, Popularity)
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Product Tags
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Call-to-Action Button
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Pagination
+                            </button>
+                        </div>
+                        <button class="btn btn-primary first" onclick="goToSection('question3d-section')">
+                            <h2 class="second">Next</h2>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Question 3d -->
+        <div id="question3d-section" class="d-none">
+            <div class="row align-items-center">
+
+                <div class="col-md-8">
+                    <div class="intro-text">
+                        <h1 class="top-heading head">
+                            Product Detail Page
+                        </h1>
+                        <p class="top-para">
+                            Which components would you like on the Product Detail Page?
+                        </p>
+                        <div class="options">
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Product Image Gallery
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Product Description
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Pricing Information
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Add to Cart Button
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Customer Reviews
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Related Products
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Specifications/Features List
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Shop Video
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Social Share Buttons
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Call-to-Action Button
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                FAQ Section
+                            </button>
+                        </div>
+                        <button class="btn btn-primary first" onclick="goToSection('question3e-section')">
+                            <h2 class="second">Next</h2>
+                        </button>
+
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="Inspo.png" alt="Sanitary Pad" class="image-container" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 3e -->
+        <div id="question3e-section" class="d-none">
+            <div class="row align-items-center frs-que">
+                <div class="col-md-4 text-center">
+                    <img src="Inspo.png" alt="Sanitary Pad" class="image-container" />
+                </div>
+                <div class="col-md-8">
+                    <div class="intro-text">
+                        <h1 class="top-heading head">
+                            Blog Listing Page
+                        </h1>
+                        <p class="top-para">
+                            Which features would you like on the Blog Listing Page?
+                        </p>
+                        <div class="options">
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Featured Post Carousel
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Categories & Tags
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Recent Posts
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Search Bar
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Popular Posts
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Excerpt Preview of Posts
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Author Bios
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Pagination
+                            </button>
+
+                        </div>
+                        <button class="btn btn-primary first" onclick="goToSection('question3f-section')">
+                            <h2 class="second">Next</h2>
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Question 3f -->
+        <div id="question3f-section" class="d-none">
+            <div class="row align-items-center">
+
+                <div class="col-md-8">
+                    <div class="intro-text">
+                        <h1 class="top-heading head">
+                            Blog Detail Page
+                        </h1>
+                        <p class="top-para">
+                            Which elements would you like on the Blog Detail Page?
+                        </p>
+                        <div class="options">
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Blog Post Content
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Featured Image
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Social Share Buttons
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Author Bio
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Comments Section
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Related Articles
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Tags
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Newsletter Signup
+                            </button>
+
+                        </div>
+                        <button class="btn btn-primary first" onclick="goToSection('question3g-section')">
+                            <h2 class="second">Next</h2>
+                        </button>
+
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="Inspo.png" alt="Sanitary Pad" class="image-container" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 3g -->
+        <div id="question3g-section" class="d-none">
+            <div class="row align-items-center frs-que">
+                <div class="col-md-4 text-center">
+                    <img src="Inspo.png" alt="Sanitary Pad" class="image-container" />
+                </div>
+                <div class="col-md-8">
+                    <div class="intro-text">
+                        <h1 class="top-heading head">
+                            Portfolio/Case Studies Listing Page
+                        </h1>
+                        <p class="top-para">
+                            Which modules would you like for the Case Studies Listing Page?
+                        </p>
+                        <div class="options">
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Project Thumbnails
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Filter by Category
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Search Bar
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Featured Projects
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Project Categories
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Call-to-Action Button
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Pagination
+                            </button>
+                        </div>
+                        <button class="btn btn-primary first" onclick="goToSection('question3h-section')">
+                            <h2 class="second">Next</h2>
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Question 3h -->
+        <div id="question3h-section" class="d-none">
+            <div class="row align-items-center">
+
+                <div class="col-md-8">
+                    <div class="intro-text">
+                        <h1 class="top-heading head">
+                            Case Study Detail Page
+                        </h1>
+                        <p class="top-para">
+                            Which components would you like for the Case Study Detail Page?
+                        </p>
+                        <div class="options">
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Project Overview
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Problem & Solution Description
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Project Images/Videos
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Client Testimonial
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Related Case Studies
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Call-to-Action Button
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Project Outcome/Results
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Social Share Buttons
+                            </button>
+                        </div>
+                        <button class="btn btn-primary first" onclick="goToSection('question3i-section')">
+                            <h2 class="second">Next</h2>
+                        </button>
+
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="Inspo.png" alt="Sanitary Pad" class="image-container" />
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Question 3i -->
+        <div id="question3i-section" class="d-none">
+            <div class="row align-items-center">
+
+                <div class="col-md-8">
+                    <div class="intro-text">
+                        <h1 class="top-heading head">
+                            Contact Page
+                        </h1>
+                        <p class="top-para">
+                            Which elements would you like on the Contact Page?
+                        </p>
+                        <div class="options">
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Contact Form
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Location Map
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Social Media Links
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Client Testimonial
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Phone Number
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Email Address
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Live Chat
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Call-to-Action Button
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Business Hours
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                FAQ Section
+                            </button>
+
+                        </div>
+                        <button class="btn btn-primary first" onclick="goToSection('question3j-section')">
+                            <h2 class="second">Next</h2>
+                        </button>
+
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="Inspo.png" alt="Sanitary Pad" class="image-container" />
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Question 3j -->
+        <div id="question3j-section" class="d-none">
+            <div class="row align-items-center frs-que">
+                <div class="col-md-4 text-center">
+                    <img src="Inspo.png" alt="Sanitary Pad" class="image-container" />
+                </div>
+                <div class="col-md-8">
+                    <div class="intro-text">
+                        <h1 class="top-heading head">
+                            Testimonials Page
+                        </h1>
+                        <p class="top-para">
+                            Which modules would you like on the Testimonials Page?
+                        </p>
+                        <div class="options">
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Client Logos
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Video Testimonials
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Written Testimonials
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Client Ratings
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Case Studies
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Call-to-Action Button
+                            </button>
+
+                        </div>
+                        <button class="btn btn-primary first" onclick="goToSection('question3k-section')">
+                            <h2 class="second">Next</h2>
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Question 3k -->
+        <div id="question3k-section" class="d-none">
+            <div class="row align-items-center frs-que">
+                <div class="col-md-4 text-center">
+                    <img src="Inspo.png" alt="Sanitary Pad" class="image-container" />
+                </div>
+                <div class="col-md-8">
+                    <div class="intro-text">
+                        <h1 class="top-heading head">
+                            FAQ Page
+                        </h1>
+                        <p class="top-para">
+                            Which features would you like for the FAQ Page?
+                        </p>
+                        <div class="options">
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Searchable FAQ
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Accordion-Style Questions
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Categories
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Contact Information
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Related Resources/Links
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Call-to-Action
+                            </button>
+
+                        </div>
+                        <button class="btn btn-primary first" onclick="goToSection('question3l-section')">
+                            <h2 class="second">Next</h2>
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Question 3l -->
+        <div id="question3l-section" class="d-none">
+            <div class="row align-items-center">
+
+                <div class="col-md-8">
+                    <div class="intro-text">
+                        <h1 class="top-heading head">
+                            Pricing Page
+                        </h1>
+                        <p class="top-para">
+                            What components would you like on the Pricing Page?
+                        </p>
+                        <div class="options">
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Pricing Table
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Feature Comparison
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Call-to-Action
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Testimonials
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Frequently Asked Questions
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Money-Back Guarantee Section
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Subscription Options
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Discounts/Offers
+                            </button>
+
+                        </div>
+                        <button class="btn btn-primary first" onclick="goToSection('question3m-section')">
+                            <h2 class="second">Next</h2>
+                        </button>
+
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="Inspo.png" alt="Sanitary Pad" class="image-container" />
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Question 3m -->
+        <div id="question3m-section" class="d-none">
+            <div class="row align-items-center frs-que">
+                <div class="col-md-4 text-center">
+                    <img src="Inspo.png" alt="Sanitary Pad" class="image-container" />
+                </div>
+                <div class="col-md-8">
+                    <div class="intro-text">
+                        <h1 class="top-heading head">
+                            Gallery Page
+                        </h1>
+                        <p class="top-para">
+                            Which elements would you like on the Gallery Page?
+                        </p>
+                        <div class="options">
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Image Slideshow
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Filterable Gallery
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Video Embeds
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Download Option
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Captions/Descriptions
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Client Logos/Partner Brands
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Lightbox View
+                            </button>
+                        </div>
+                        <button class="btn btn-primary first" onclick="goToSection('question3n-section')">
+                            <h2 class="second">Next</h2>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Question 3n -->
+        <div id="question3n-section" class="d-none">
+            <div class="row align-items-center">
+
+                <div class="col-md-8">
+                    <div class="intro-text">
+                        <h1 class="top-heading head">
+                            Careers Page
+                        </h1>
+                        <p class="top-para">
+                            What should be included on the Careers Page?
+                        </p>
+                        <div class="options">
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Job Listings
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Company Culture Section
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Benefits Overview
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Application Form
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Video/Images of Workplace
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Employee Testimonials
+                            </button>
+                            <button data-score="1" onclick="selectOption(this, 'question2-image')">
+                                Call-to-Action Button
+                            </button>
+                        </div>
+                        <button class="btn btn-primary first" onclick="goToSection('question4-section')">
+                            <h2 class="second">Next</h2>
+                        </button>
+
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="Inspo.png" alt="Sanitary Pad" class="image-container" />
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div id="question4-section" class="d-none">
+            <div class="row align-items-center frs-que">
+                <div class="col-md-4 text-center">
+                    <img src="Inspo.png" alt="Sanitary Pad" class="image-container" />
+                </div>
+                <div class="col-md-8">
+                    <div class="intro-text">
+                        <h1 class="top-heading head">
+                            Additional Functionalities
+                        </h1>
+                        <p class="top-para">
+                            Do you need specific functionalities across pages?
+                        </p>
+                        <div class="options">
+                            <label>
+                                <input type="checkbox" id="trueCheckbox" onclick="toggleOptions(this)"> True
+                            </label>
+                            <label>
+                                <input type="checkbox" id="falseCheckbox" onclick="toggleOptions(this)"> False
+                            </label>
+                        </div>
+                        <select id="extraOptions" style="display: none;     margin-top: 20px;">
+                            <option value="">Select an option</option>
+                            <option value="1">Custom Contact Forms</option>
+                            <option value="2">Payment gateway integration</option>
+                            <option value="3">Appointment Scheduling</option>
+                            <option value="4">E-commerce (Product Pages & Shopping Cart)</option>
+                            <option value="5">Social Media Integration</option>
+                            <option value="6">Lead forms</option>
+                            <option value="7">CRMs</option>
+                            <option value="8">SMTP</option>
+                            <option value="9">WA/Calendy/Zapier</option>
+                            <option value="10">Pop Ups</option>
+                            <option value="11">ReCaptcha</option>
+                            <option value="12">Website Accessbility Tools (Audio Eye, User Way etc)</option>
+                            <option value="13">Chatbots</option>
+                            <option value="14">Live Chat</option>
+                            <option value="15">Client Portal/Login</option>
+                            <option value="16">Blog/News Management</option>
+                            <option value="17">Sliders</option>
+                            <option value="18">Micro Animations (bounce, bubble, fade in/out etc)</option>
+                            <option value="19">Hover effects</option>
+                            <option value="20">Marquee</option>
+                            <option value="10">Mega Menus</option>
+                            <option value="10">Counters</option>
+                            <option value="10">Motion Animations</option>
+                            <option value="10">Other (please specify)</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary" onclick="finishQuiz()">
+                        Finish
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div id="question4-section" class="d-none">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center">
+                    <img src="/asset/Asset 8.svg" alt="Sanitary Pad" id="question5b-image" class="image-container" />
+                </div>
+                <div class="col-md-8">
+                    <h2>How many episodes of menstrual flooding occurs in a day?</h2>
+                    <input type="number" id="pad-change-frequency-5" class="form-control"
+                        placeholder="Enter a value (1-20)" min="1" max="20" />
+
+                    <!-- <button class="btn btn-secondary" onclick="finishQuiz()">Skip</button> -->
+                </div>
+            </div>
+        </div>
+        <div id="question5-section" class="d-none">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center">
+                    <img id="imgresult" src="./asset/Asset 6.svg" alt="Sanitary Pad" class="image-container" />
+                </div>
+                <div class="col-md-8">
+                    <h2 id="title12"></h2>
+                    <p id="result-text"></p>
+                    <div class="last-btn">
+                        <button id="finalScoreButton" class="btn btn-primary last" onclick="finaldata()"
+                            data-finalscore="">
+                            >
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="server" class="container py-5 d-none">
+            <div class="text-center mb-4">
+                <h1 class="fw-bold" style="color: #f3813c">
+                    General Management of Menorrhagia
+                </h1>
+            </div>
+            <div class="row">
+                <!-- Lifestyle Modifications -->
+                <div class="col-md-6 mb-4">
+                    <div class="p-4 h-100" style="background-color: #f9ede7; border-radius: 8px">
+                        <h2 class="fw-bold mb-3" style="color: #f3813c">
+                            Lifestyle Modifications:
+                        </h2>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                Regular exercise and a balanced diet can help manage symptoms
+                            </li>
+                            <li class="mb-2">
+                                Maintaining a healthy weight can also regulate menstrual
+                                cycles
+                            </li>
+                            <li class="mb-2">
+                                Ensuring adequate iron intake through diet or supplementation
+                                is crucial for preventing iron deficiency anemia
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Regular Monitoring -->
+                <div class="col-md-6 mb-4 life">
+                    <div class="p-4 h-100" style="background-color: #f9ede7; border-radius: 8px">
+                        <h2 class="fw-bold mb-3" style="color: #f3813c">
+                            Regular Monitoring:
+                        </h2>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                Regular check-ups with a healthcare provider to monitor
+                                symptoms and adjust treatment plans as necessary
+                            </li>
+                            <li class="mb-2">
+                                Keeping track of menstrual cycles and symptoms can help
+                                identify patterns and effectiveness of treatments
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-warning px-4 py-2" style="
+              background-color: #f3813c;
+              color: white;
+              border: none;
+              border-radius: 10px;
+              font-size: 24px;
+            ">Click here to view Gynecologists near you</a>
+            </div>
+        </div>
+        <div id="mild" class="container py-5 d-none">
+            <div class="text-center mb-4">
+                <h1 class="fw-bold" style="color: #f3813c">
+                    General Management of Menorrhagia
+                </h1>
+            </div>
+            <div class="row">
+                <!-- Lifestyle Modifications -->
+                <div class="col-md-6 mb-4">
+                    <div class="p-4 h-100" style="background-color: #f9ede7; border-radius: 8px">
+                        <h2 class="fw-bold mb-3" style="color: #f3813c">
+                            Lifestyle Modifications:
+                        </h2>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                Regular exercise and a balanced diet can help manage symptoms
+                            </li>
+                            <li class="mb-2">
+                                Maintaining a healthy weight can also regulate menstrual
+                                cycles
+                            </li>
+                            <li class="mb-2">
+                                Ensuring adequate iron intake through diet or supplementation
+                                is crucial for preventing iron deficiency anemia
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Regular Monitoring -->
+                <div class="col-md-6 mb-4 life">
+                    <div class="p-4 h-100" style="background-color: #f9ede7; border-radius: 8px">
+                        <h2 class="fw-bold mb-3" style="color: #f3813c">
+                            Regular Monitoring:
+                        </h2>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                Regular check-ups with a healthcare provider to monitor
+                                symptoms and adjust treatment plans as necessary
+                            </li>
+                            <li class="mb-2">
+                                Keeping track of menstrual cycles and symptoms can help
+                                identify patterns and effectiveness of treatments
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4"></div>
+        </div>
+    </div>
+
+
+    <script>
+        function toggleOptions(checkbox) {
+            const trueCheckbox = document.getElementById("trueCheckbox");
+            const falseCheckbox = document.getElementById("falseCheckbox");
+            const extraOptions = document.getElementById("extraOptions");
+
+            // If "True" is checked, show the dropdown and uncheck "False"
+            if (checkbox.id === "trueCheckbox" && checkbox.checked) {
+                falseCheckbox.checked = false;
+                extraOptions.style.display = "block";
+            }
+            // If "False" is checked, hide the dropdown and uncheck "True"
+            else if (checkbox.id === "falseCheckbox" && checkbox.checked) {
+                trueCheckbox.checked = false;
+                extraOptions.style.display = "none";
+            }
+            // If both are unchecked, hide options
+            else {
+                extraOptions.style.display = "none";
+            }
+        }
+    </script>
+    <script>
+        function goToSection(sectionId) {
+            document
+                .querySelectorAll(".quiz-container > div")
+                .forEach((section) => section.classList.add("d-none"));
+            document.getElementById(sectionId).classList.remove("d-none");
+        }
+
+        function validateAndGo(inputId, sectionId, min, max) {
+            const input = document.getElementById(inputId).value;
+            if (input >= min && input <= max) {
+                goToSection(sectionId);
+            } else {
+                alert(`Please enter a value between ${min} and ${max}.`);
+            }
+        }
+
+        function goToQuestion3() {
+            goToSection("question3-section");
+        }
+
+        function skipToQuestion2b() {
+            goToQuestion2b();
+        }
+        function goToQuestion5() {
+            goToSection("question5-section");
+        }
+
+        function skipToQuestion() {
+            goToQuestion5();
+        }
+
+        function finishQuiz() {
+            alert("Thank you for completing the quiz!");
+        }
+
+        function selectOption(button, imagePath, imageId) {
+            const buttons = button.parentElement.querySelectorAll("button");
+            buttons.forEach((btn) => btn.classList.remove("selected"));
+            button.classList.add("selected");
+            document.getElementById(imageId).src = imagePath;
+        }
+
+        function calculateScore() {
+            // Get inputs from question1-section and question1b-section
+            const padCount = parseInt(document.getElementById("pad-count").value) || 0;
+            const saturationScore1 =
+                document.querySelector("#question1b-section .options .selected")?.dataset
+                    .score || 0;
+
+            // Get inputs from question2-section and question2b-section
+            const tamponCount =
+                parseInt(document.getElementById("pad-change-frequency").value) || 0;
+            const saturationScore2 =
+                document.querySelector("#question2b-section .options .selected")?.dataset
+                    .score || 0;
+
+            // Get inputs from question3-section and question4-section
+            const clotSizeScore =
+                document.querySelector("#question3-section .options .selected")?.dataset
+                    .score || 0;
+            const padChangeFrequency5 =
+                parseInt(document.getElementById("pad-change-frequency-5").value) || 0;
+            const padChangeFrequency = padChangeFrequency5 * 5;
+            // Calculate final score
+            const section1Score = padCount * saturationScore1;
+            const section2Score = tamponCount * saturationScore2;
+            const finalScore =
+                section1Score +
+                section2Score +
+                parseInt(clotSizeScore) +
+                padChangeFrequency;
+
+            // Display the appropriate section based on the score
+            const question5Section = document.getElementById("question5-section");
+            const resultText = document.getElementById("result-text");
+            const title12 = document.getElementById("title12");
+            const imgresult = document.getElementById("imgresult");
+            const button = document.getElementById("finalScoreButton");
+            button.setAttribute("data-finalscore", finalScore);
+            if (finalScore < 100) {
+                title12.innerHTML = "Mild";
+                resultText.innerText = `You have a score of less than 100. your score is ${finalScore} If you have concerns about your period you should always consult your GP/OBGY. You can also follow a few general management lifestyle modifications.`;
+            } else if (finalScore == 100) {
+                title12.innerHTML = "Mild";
+                resultText.innerText = `You have a score of less than 100. your score is ${finalScore} If you have concerns about your period you should always consult your GP/OBGY. You can also follow a few general management lifestyle modifications.`;
+            } else {
+                imgresult.src = "./asset/Asset 5.svg";
+                title12.innerHTML = "SEVERE!";
+                resultText.innerText = `You have a score above 100!. your score is ${finalScore} This indicates probable menorrhagia and you should seek advice from your doctor, along with following general management of menorrhagia.`;
+            }
+
+            document
+                .querySelectorAll(".quiz-container > div")
+                .forEach((section) => section.classList.add("d-none"));
+            question5Section.classList.remove("d-none");
+        }
+        function finaldata(params) {
+            const mild = document.getElementById("mild");
+            const server = document.getElementById("server");
+            const button = document.getElementById("finalScoreButton");
+            const finalScore = parseInt(button.getAttribute("data-finalscore"), 10);
+            if (finalScore < 100) {
+                document
+                    .querySelectorAll(".quiz-container > div")
+                    .forEach((section) => section.classList.add("d-none"));
+                mild.classList.remove("d-none");
+            } else {
+                document
+                    .querySelectorAll(".quiz-container > div")
+                    .forEach((section) => section.classList.add("d-none"));
+                server.classList.remove("d-none");
+            }
+
+        }
+
+        // function selectOption(button, imagePath, imageId) {
+        //   const buttons = button.parentElement.querySelectorAll("button");
+        //   buttons.forEach((btn) => btn.classList.remove("selected"));
+        //   button.classList.add("selected");
+        //   document.getElementById(imageId).src = imagePath;
+        // }
+
+        // Update the "Finish" button in the quiz to call `calculateScore`
+        function finishQuiz() {
+            calculateScore();
+        }
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

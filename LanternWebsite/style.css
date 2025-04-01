@@ -1,0 +1,1379 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Service Section CSS Start */
+.btn-1 {
+  background-color: #fb8d00;
+  padding: 10px 30px;
+  border-radius: 10px;
+  border: 1px solid #fb8d00;
+}
+.btn-1:hover {
+  background-color: transparent;
+  border: 1px solid #fb8d00;
+  color: white;
+}
+.services {
+  background-color: #070707;
+  min-height: 80vh !important;
+  padding-bottom: 10px !important;
+}
+.services-1 {
+  width: 49%;
+  gap: 20px;
+}
+.service-h5 > h5 {
+  color: #fb8e00;
+  font-size: 22px;
+  font-weight: 600;
+}
+.home-service {
+  font-size: 18px;
+}
+
+.service-h2 > h2 {
+  font-size: 45px;
+}
+.service-p > p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.hero-btn > button {
+  background-color: #fb8e00;
+  font-size: 18px;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 10px;
+  border: 1px solid #fb8e00;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+  padding: 15px 40px 15px 40px;
+  transition: all 0.2s linear;
+  font-weight: bold;
+}
+.hero-btn > button:hover {
+  background-color: transparent;
+}
+.services-2 {
+  width: 50%;
+}
+.hero-counter {
+  gap: 10px;
+}
+.child-counter {
+  background-color: #fb8e00;
+  min-width: 49%;
+  min-height: 148px;
+  border-radius: 20px;
+}
+.child-counter > p {
+  color: white;
+  text-transform: uppercase;
+}
+.child-counter > span {
+  font-size: 72px;
+  font-weight: 600;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+  stroke: #000;
+}
+
+/* performance-marketing CSS Start */
+
+.performance-marketing {
+  background-image: url("./performance-marketing.png");
+  width: 100%;
+  min-height: 50vh;
+}
+.performance-content {
+  padding: 50px 0px;
+}
+.performance-content > h2 {
+  width: 65%;
+  font-size: 45px;
+  font-weight: 700;
+  margin: auto;
+}
+.performance-content > p {
+  font-size: 18px;
+  font-weight: 400;
+  width: 67%;
+  margin: auto;
+  padding-block: 20px;
+}
+.performance-btn {
+  padding-top: 20px;
+}
+.performance-btn > button {
+  background-color: black;
+  font-size: 18px;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  padding: 15px 40px 15px 40px;
+  transition: all 0.2s linear;
+}
+.performance-btn > button:hover {
+  background-color: #fb8e00;
+}
+
+/* unskippable CSS Start */
+
+.unskippable {
+  background-color: black;
+  min-height: 50vh;
+}
+.unskippable-content {
+  padding: 50px 0px;
+}
+.unskippable-content > h2 {
+  font-size: 45px;
+  font-weight: bold;
+}
+.unskippable-content > p {
+  font-size: 18px;
+  width: 50%;
+  margin: auto;
+  padding-block: 20px;
+  font-weight: 400;
+}
+.unskippable-btn {
+  padding-top: 20px;
+}
+.unskippable-btn > button {
+  background-color: black;
+  font-size: 18px;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+  border: 1px solid white;
+  padding: 15px 40px 15px 40px;
+  transition: all 0.2s linear;
+}
+.unskippable-btn > button:hover {
+  background-color: #fb8e00;
+}
+
+/* speak CSS Start */
+
+.main-speak-div {
+  gap: 20px;
+  padding-top: 50px;
+}
+.speak-content {
+  padding: 50px 0px;
+}
+.speak-content > h2 {
+  font-size: 45px;
+  font-weight: bold;
+}
+.speak-content > p {
+  font-size: 18px;
+  font-weight: 400;
+  width: 52%;
+  padding-block: 20px;
+}
+.speak-img > img {
+  width: 114px;
+  height: 140px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.common-speak {
+  width: 49%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  padding: 20px 15px;
+  transition: all 0.2s linear;
+}
+.speak-content-child > h3 {
+  font-size: 25px;
+  font-weight: bold;
+}
+.speak-content-child > p {
+  font-size: 18px;
+  color: #7a7a7a;
+}
+.common-speak:hover {
+  background-color: #fb8e00;
+}
+
+.common-speak:hover .speak-content-child > p {
+  color: black;
+}
+
+/* ld-service CSS Start */
+.main-ld > h2 {
+  font-size: 45px;
+  font-weight: 600;
+  text-align: center;
+  padding: 30px 0px;
+}
+.ld-service {
+  background-color: #f2f2f2;
+  padding-bottom: 50px;
+}
+.ld-card {
+  width: 31%;
+  background-color: white;
+  padding: 20px 0px 20px 16px;
+  transition: all 0.2s linear;
+  min-height: 86px;
+}
+.ldcard-img {
+  margin-right: 25px;
+}
+.ldcard-img > a > img {
+  width: 35px;
+  height: 35px;
+}
+.parent-ldcard {
+  padding-top: 20px;
+}
+.ld-card:hover {
+  background-color: #fb8e00;
+}
+
+/* blog Section CSS Start */
+
+.blog {
+  min-height: 50vh;
+  background-color: black;
+  padding: 50px 0px;
+}
+.blog-content > h2 {
+  font-size: 45px;
+  color: white;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+.blog-img {
+  padding-top: 20px;
+}
+.blog-img {
+  background-image: url("./blog-Image.png");
+  border-radius: 10px;
+  object-fit: contain;
+  width: 80%;
+  min-height: 300px;
+  display: block;
+  margin: auto;
+}
+.blog-date {
+  background-color: rgba(0, 0, 0, 0.562);
+}
+.blog-date > p {
+  font-size: 12px;
+  padding-top: 10px;
+}
+.blog-date > h5 {
+  font-size: 22px;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+}
+
+/* guarantee section CSS Start */
+.guarantee {
+  background-image: url("./guarantee.png");
+  width: 100%;
+  min-height: 60vh;
+  background-color: black;
+  padding: 20px 0px;
+}
+.guarantee-content > h4 {
+  text-align: center;
+  color: white;
+}
+.guarantee-content > h2 {
+  text-align: center;
+  color: white;
+  font-size: 45px;
+  font-weight: bold;
+  padding-block: 20px;
+  text-transform: uppercase;
+}
+.guarantee-btn {
+  padding-top: 20px;
+}
+.guarantee-btn > button {
+  transition: all 0.2s linear;
+  padding: 15px 40px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.guarantee-btn > button:hover {
+  background-color: #fb8e00;
+  border: 1px solid #fb8e00;
+}
+
+/* your-brand CSS Start */
+
+.your-brand {
+  background-color: black;
+  min-height: 100vh;
+  border-bottom: 1px solid white;
+  padding-bottom: 50px;
+}
+.your-brand-content > h2 {
+  padding: 50px 0px;
+  font-size: 45px;
+  color: white;
+  text-align: center;
+}
+.child-brand {
+  border: 1px solid #ffffff94;
+  width: 30%;
+  min-height: 375px;
+  border-radius: 16px;
+  text-align: start;
+  position: relative;
+  transition: all 0.2s linear;
+}
+.child-brand:hover {
+  border: 1px solid #fb8e00;
+  transform: translateY(-10px);
+}
+.child-brand:hover .brand-list {
+  color: #fb8e00;
+  -webkit-text-stroke-color: #fb8e00;
+  stroke: #fb8e00;
+}
+.child-brand > h2 {
+  padding: 50px 10px 0px 25px;
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+.child-brand > p {
+  padding: 0px 25px 20px 25px;
+  font-size: 18px;
+  color: white;
+  font-weight: 400;
+}
+.main-your-brand {
+  flex-wrap: wrap;
+  margin: auto;
+  text-align: center;
+  gap: 64px;
+  padding-top: 20px;
+}
+
+.brand-list {
+  font-size: 80px;
+  color: black;
+  -webkit-text-stroke-width: 1px;
+  stroke-width: 1px;
+  -webkit-text-stroke-color: #7a7a7a;
+  stroke: #7a7a7a;
+  position: absolute;
+  top: -54px;
+  left: 25px;
+  background-color: black;
+}
+
+/* range-1 CSS Start */
+.range {
+  min-height: 80vh;
+}
+.range-1 {
+  width: 30%;
+}
+.range-2 {
+  background-image: url("./ampun-suhu-7-2.png");
+  width: 68%;
+  background-color: #fb8e00;
+  min-height: 80vh;
+  padding: 0px 25px 0px 25px;
+}
+.range-1 > h2 {
+  font-size: 45px;
+  font-weight: bolder;
+  padding-left: 15%;
+}
+.child-range-card {
+  width: 30%;
+  border: 1px solid black;
+  min-height: 188px;
+  border-radius: 10px;
+  padding: 10px;
+  gap: 10px;
+  display: grid;
+}
+.child-range-card > h5 {
+  font-size: 18px;
+}
+.main-range-card {
+  gap: 20px;
+}
+.child-range-card > h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.child-range-card > p {
+  font-size: 16px;
+}
+
+/* Slider Image CSS Start */
+
+.global-brands {
+  width: 100%;
+  overflow: hidden;
+}
+.autoplay {
+  display: flex;
+  align-items: center;
+}
+.slider-img {
+  padding: 0 10px;
+  width: 200px;
+}
+.slider-img img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+}
+.global-brands-content > h2 {
+  font-weight: 300;
+}
+.global-brands-content > h2 > span {
+  font-weight: 800;
+  font-size: 45px;
+}
+.global-brands-content > h2 {
+  padding: 20px 0px;
+}
+
+/* Accordian CSS Start */
+
+.accordian-section {
+  padding: 50px 20px;
+}
+.accordion {
+  width: 90%;
+  margin: auto;
+  background: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+.accordion-item {
+  border-bottom: 1px solid #7a7a7a;
+}
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 15px 5px 15px;
+  cursor: pointer;
+  background: transparent;
+  color: black;
+  border: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+.accordion-header > h4 {
+  font-size: 20px;
+  /* text-decoration: underline; */
+}
+
+.accordion-header span {
+  font-size: 15px;
+}
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 15px;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+}
+.accordion-content p {
+  margin: 5px 0;
+  font-size: 18px;
+  color: #7a7a7a;
+  line-height: 1.5;
+}
+.accordion-h2 > h2 {
+  font-size: 45px;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+
+/* marketing-channels CSS start */
+
+.marketing-channels {
+  background-color: #f2f2f2;
+  min-height: 30vh;
+  margin-bottom: 5px;
+}
+
+/* grow-big Section CSS Start */
+.grow-big {
+  background-color: #f2f2f2;
+  min-height: 40vh;
+}
+.main-grow-big {
+  background-color: black;
+  width: 100%;
+  border-radius: 20px;
+  max-height: 35vh;
+}
+.grow-content {
+  font-style: italic;
+  color: white;
+  padding: 40px 25px;
+}
+.grow-content > p {
+  padding-top: 15px;
+}
+
+/* SEO Page CSS Start */
+
+/* guarantee-seo section CSS Start */
+.guarantee-seo {
+  background-image: url("./guarantee.png");
+  width: 100%;
+  min-height: 30vh;
+  background-color: black;
+  padding: 20px 0px;
+}
+.guarantee-seo-content {
+  width: 70%;
+}
+.guarantee-seo-content > h4 {
+  text-align: center;
+  color: white;
+}
+.guarantee-seo-content > h2 {
+  text-align: start;
+  color: white;
+  font-size: 45px;
+  font-weight: bold;
+  padding-block: 20px;
+}
+.guarantee-seo-btn {
+  padding-top: 20px;
+}
+.guarantee-seo-btn > button {
+  transition: all 0.2s linear;
+  padding: 15px 40px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.guarantee-seo-btn > button:hover {
+  background-color: #fb8e00;
+  border: 1px solid #fb8e00;
+}
+
+/* ld-service CSS Start */
+
+.parent-ldcard-seo {
+  gap: 20px;
+}
+.ldcard-servive > a > h4 {
+  min-width: 206px;
+  font-weight: bold !important;
+}
+
+/* marketing-channels  CSS Start*/
+
+.marketing-seo-content > h5 {
+  font-size: 25px;
+  padding: 10px;
+}
+
+/* lantern-way Section CSS Start */
+
+.lantern-way {
+  min-height: 40vh;
+  background-color: #fb8d00;
+}
+.content-lantern-way {
+  width: 70%;
+}
+.content-lantern-way > h2 {
+  font-size: 45px;
+  color: white;
+  font-weight: bold;
+}
+.btn-lantern-way > button {
+  width: 245px;
+  height: 70px;
+  background-color: white;
+  color: #fb8d00;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  transition: all 0.2s linear;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.btn-lantern-way > button:hover {
+  background-color: black;
+}
+/* big-word Section CSS Start  */
+
+.big-word {
+  min-height: 30vh;
+  background-color: #f2f2f2;
+}
+
+.big-word-content > h3 {
+  padding: 20px 0px;
+}
+
+/* Helthcare CSS Start */
+
+.child-brand-helthcare {
+  border: 1px solid #ffffff94;
+  width: 30%;
+  min-height: 275px;
+  border-radius: 16px;
+  text-align: start;
+  position: relative;
+  transition: all 0.2s linear;
+}
+.child-brand-helthcare:hover {
+  border: 1px solid #fb8e00;
+  transform: translateY(-10px);
+}
+.child-brand-helthcare:hover .brand-list {
+  color: #fb8e00;
+  -webkit-text-stroke-color: #fb8e00;
+  stroke: #fb8e00;
+}
+.child-brand-helthcare > h2 {
+  padding: 50px 10px 0px 25px;
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+.child-brand-helthcare > p {
+  padding: 0px 25px 20px 25px;
+  font-size: 18px;
+  color: white;
+  font-weight: 400;
+}
+
+/* big-word-local css start */
+
+.big-word-local {
+  min-height: 20vh;
+  background-color: #f2f2f2;
+}
+
+.big-word-content-local > h3 {
+  padding: 20px 0px;
+}
+
+/* child-range-card-local css start */
+
+.child-range-card-local {
+  width: 45%;
+  border: 1px solid black;
+  min-height: 188px;
+  border-radius: 10px;
+  padding: 10px;
+  gap: 10px;
+  display: grid;
+}
+.child-range-card-local > h5 {
+  font-size: 18px;
+}
+.child-range-card-local > h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.child-range-card-local > p {
+  font-size: 16px;
+}
+
+/* child-brand-link section css start */
+
+.child-brand-link {
+  border: 1px solid #ffffff94;
+  width: 45%;
+  min-height: 275px;
+  border-radius: 16px;
+  text-align: start;
+  position: relative;
+  transition: all 0.2s linear;
+}
+.child-brand-link:hover {
+  border: 1px solid #fb8e00;
+  transform: translateY(-10px);
+}
+.child-brand-link:hover .brand-list {
+  color: #fb8e00;
+  -webkit-text-stroke-color: #fb8e00;
+  stroke: #fb8e00;
+}
+.child-brand-link > h2 {
+  padding: 50px 10px 0px 25px;
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+.child-brand-link > p {
+  padding: 0px 25px 20px 25px;
+  font-size: 18px;
+  color: white;
+  font-weight: 400;
+}
+
+/* just_results section css start */
+
+.just_results {
+  padding-block: 50px;
+}
+.child-just-results {
+  width: 30%;
+  background-color: #f2f2f2;
+  padding: 20px;
+  align-content: center;
+}
+.main-just-results {
+  gap: 20px;
+  padding-top: 20px;
+}
+.content-just_results > h2 {
+  font-size: 45px;
+}
+
+/* seo_success section css start */
+
+.seo_success {
+  min-height: 50vh;
+}
+.content-seo_success {
+  padding-bottom: 30px;
+}
+.content-seo_success > h2 {
+  padding-block: 50px;
+  font-size: 45px;
+}
+.child-seo_success-1 {
+  background-image: url("./Rectangle-131.jpg");
+  width: 30%;
+  min-height: 260px;
+  background-size: cover;
+  border-radius: 10px;
+}
+.child-seo_success-1 {
+  background-image: url("./Rectangle-131.jpg");
+  width: 24%;
+  min-height: 260px;
+  background-size: cover;
+  border-radius: 20px;
+  padding: 15px;
+}
+.child-seo_success-2 {
+  background-image: url("./Rectangle-132.jpg");
+  width: 24%;
+  min-height: 260px;
+  background-size: cover;
+  padding: 15px;
+  border-radius: 20px;
+}
+.child-seo_success-3 {
+  background-image: url("./Rectangle-133.jpg");
+  width: 24%;
+  min-height: 260px;
+  background-size: cover;
+  padding: 15px;
+  border-radius: 20px;
+}
+.child-seo_success-4 {
+  background-image: url("./Rectangle-134.jpg");
+  width: 24%;
+  min-height: 260px;
+  background-size: cover;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+/* trusted-seo section css start */
+
+.trusted-seo {
+  background-image: url("./Clip-path-group.png");
+  width: 100%;
+  height: 40vh;
+  background-color: black;
+  background-size: cover;
+  margin-block: 10px;
+}
+
+.trusted-seo-main > h2 {
+  font-size: 45px;
+}
+.content-num-target {
+  padding-left: 20px;
+}
+
+/* ld-playbook section css start */
+
+.ld-playbook {
+  background-color: #f2f2f2;
+  min-height: 30vh;
+}
+
+/* number-targe section css start */
+
+.child-num-target > img {
+  width: 92px;
+  height: 92px;
+}
+.content-num-target {
+  width: 90%;
+}
+.main-number-target {
+  gap: 40px;
+  display: grid;
+  padding-block: 30px;
+}
+.content-num-target > h4 {
+  font-weight: bold;
+}
+.content-num-target > h5 {
+  font-weight: bold;
+}
+
+/* design_agency section css start */
+
+.design_agency {
+  background-color: black;
+  padding-block: 50px;
+}
+.design_agency-h2 {
+  text-align: center;
+  width: 85%;
+  margin: auto;
+  color: white;
+  font-size: 45px;
+}
+.main-design-agency {
+  gap: 25px;
+}
+.child-design-agency {
+  width: 22%;
+  min-height: 280px;
+  border-radius: 20px;
+  padding: 20px;
+  transition: all 0.2s linear;
+  border: 1px solid #ffffff94;
+  color: white;
+  gap: 10px;
+  display: grid;
+}
+
+.parent-img-agency {
+  background-color: #2e2e2e;
+  padding: 15px;
+  width: 60px;
+  height: 60px;
+}
+.child-design-agency:hover {
+  background-color: #fb8d00;
+  transform: translateY(-10px);
+}
+.parent-img-agency > img {
+  display: flex;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+
+.our-tech-stack {
+  padding-block: 50px;
+}
+.child-stack {
+  border: 1px solid rgba(211, 211, 211, 0.813);
+  padding: 30px;
+  width: 16.6%;
+  text-align: center;
+}
+.stack-h2 {
+  font-size: 45px;
+  padding-bottom: 25px;
+  text-align: center;
+}
+.child-stack > img {
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .ecomm-br {
+    display: none;
+  }
+  .child-brand {
+    width: 45%;
+  }
+  .child-brand-helthcare {
+    width: 45%;
+  }
+  .child-brand-link {
+    width: 45%;
+  }
+  .child-counter > span {
+    font-size: 50px;
+  }
+  .common-speak {
+    width: 40%;
+  }
+  .main-speak-div {
+    justify-content: center !important;
+  }
+  .speak-img {
+    align-content: center;
+  }
+  .ldcard-img {
+    margin-right: 18px;
+  }
+  .ld-card {
+    justify-content: center !important;
+  }
+}
+@media (max-width: 992px) {
+  .child-stack {
+    width: 30% !important;
+  }
+
+  .child-design-agency {
+    width: 45%;
+  }
+
+  .content-seo_success > h2 {
+    font-size: 35px;
+    padding-block: 20px;
+  }
+
+  .child-seo_success-1 {
+    width: 48% !important;
+  }
+  .child-seo_success-2 {
+    width: 48% !important;
+  }
+  .child-seo_success-3 {
+    width: 48% !important;
+  }
+  .child-seo_success-4 {
+    width: 48% !important;
+  }
+  .seo_success-main {
+    gap: 20px;
+    justify-content: center !important;
+  }
+
+  .just-result-br {
+    display: none;
+  }
+  .child-just-results {
+    width: 48%;
+  }
+
+  .big-word-content > h3 {
+    padding: 10px 0px;
+  }
+  .big-word {
+    min-height: 25vh;
+  }
+
+  .big-word-content-local > h3 {
+    padding: 10px 0px;
+  }
+  .big-word-local {
+    min-height: 20vh;
+  }
+
+  .btn-lantern-way {
+    text-align: center;
+    padding-top: 25px;
+  }
+  .marketing-channels-content {
+    line-height: 1.2;
+    padding: 0px 20px;
+    text-align: start !important;
+  }
+  .marketing-channels-content > h5 {
+    font-size: 18px;
+  }
+  .child-brand {
+    width: 45%;
+  }
+  .child-brand-helthcare {
+    width: 45%;
+  }
+  .child-brand-link {
+    width: 45%;
+  }
+  .child-range-card {
+    width: 40%;
+  }
+  .child-range-card-local {
+    width: 45%;
+  }
+  .range-2 {
+    width: 62%;
+    padding-block: 20px;
+  }
+  .range-1 > h2 {
+    font-size: 35px;
+    padding: 20px 10px;
+    text-align: center;
+  }
+  .services-1 {
+    width: 100%;
+    text-align: center;
+  }
+  .main-services {
+    display: block !important;
+    padding-bottom: 20px;
+  }
+  .services-2 {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .performance-content > h2 {
+    width: 100% !important;
+    font-size: 35px !important;
+  }
+  .performance-content > p {
+    width: 100% !important;
+  }
+  .unskippable-content > p {
+    width: 100%;
+  }
+  .common-speak {
+    width: 100%;
+  }
+  .main-speak-div {
+    justify-content: center !important;
+  }
+  .parent-ldcard {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .ld-card {
+    width: 100%;
+    justify-content: start !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .stack-h2 {
+    font-size: 35px;
+  }
+
+  .child-stack > img {
+    width: 80px;
+    height: 80px;
+  }
+  .child-stack {
+    padding: 20px;
+  }
+
+  .child-design-agency {
+    width: 100%;
+  }
+  .main-design-agency {
+    padding-top: 15px !important;
+  }
+
+  .design_agency-h2 {
+    font-size: 32px;
+    text-align: start;
+  }
+
+  .child-num-target {
+    flex-direction: column;
+    justify-content: start !important;
+    display: grid !important;
+  }
+  .child-num-target > img {
+    padding-block: 10px;
+    padding-left: 20px;
+  }
+
+  .ld-playbook-h3 {
+    font-size: 30px;
+    padding: 10px;
+  }
+
+  .trusted-seo {
+    max-height: 30vh;
+  }
+  .trusted-seo-main > h2 {
+    font-size: 35px;
+  }
+
+  .child-seo_success-1 {
+    width: 100% !important;
+  }
+  .child-seo_success-2 {
+    width: 100% !important;
+  }
+  .child-seo_success-3 {
+    width: 100% !important;
+  }
+  .child-seo_success-4 {
+    width: 100% !important;
+  }
+  .content-seo_success > h2 {
+    font-size: 25px;
+  }
+
+  .child-just-results {
+    width: 100%;
+  }
+  .content-just_results > h2 {
+    font-size: 35px;
+  }
+  .tech-h2-seo {
+    width: 100% !important;
+  }
+  .big-word-content > h3 {
+    padding: 15px 10px;
+  }
+  .big-word-content-local > h3 {
+    padding: 15px 10px;
+  }
+  .lantern-way {
+    min-height: 30vh;
+    padding: 15px 10px;
+  }
+  .main-lantern-way {
+    flex-direction: column;
+  }
+  .content-lantern-way {
+    width: 100%;
+    text-align: center;
+  }
+  .content-lantern-way > h2 {
+    font-size: 35px;
+  }
+  .marketing-seo-content > h5 {
+    font-size: 20px;
+  }
+  .main-guarantee {
+    display: block !important;
+  }
+  .guarantee-seo-content {
+    width: 100%;
+    padding-inline: 10px;
+  }
+  .guarantee-seo-content > h2 {
+    text-align: center;
+  }
+  .accordion {
+    width: 100%;
+  }
+  .accordion-h2 > h2 {
+    font-size: 35px;
+  }
+  .arrow {
+    padding: 0px 5px;
+  }
+  .accordian-section {
+    padding: 20px 0px;
+  }
+  .accordion-h2 > h2 {
+    padding-bottom: 10px;
+  }
+  .accordion-header > h4 {
+    font-size: 18px;
+  }
+  .accordion-content p {
+    font-size: 16px;
+    line-height: normal;
+  }
+  .child-brand {
+    min-height: 300px;
+  }
+  .child-brand-helthcare {
+    min-height: 250px;
+  }
+  .child-brand-link {
+    min-height: 250px;
+  }
+  .range-content {
+    flex-direction: column;
+  }
+  .range-1 {
+    width: 100%;
+    padding-block: 20px;
+  }
+  .range-2 {
+    width: 100%;
+    min-height: 60vh;
+  }
+  .child-range-card {
+    width: 45%;
+  }
+  .child-range-card-local {
+    width: 45%;
+  }
+  .child-brand {
+    width: 100%;
+  }
+  .child-brand-helthcare {
+    width: 100%;
+  }
+  .child-brand-link {
+    width: 100%;
+  }
+  .your-brand-content > h2 {
+    font-size: 35px;
+  }
+  .child-counter {
+    max-width: 49% !important;
+  }
+  .blog-img {
+    width: 100% !important;
+  }
+  .main-ld > h2 {
+    font-size: 35px;
+    padding: 20px 0px 0px 0px !important;
+  }
+  .service-h2 > h2 {
+    font-size: 32px;
+    text-align: start;
+  }
+  .service-p > p {
+    text-align: start;
+  }
+  .unskippable-content > h2 {
+    font-size: 30px;
+  }
+
+  .speak-content > p {
+    width: 100%;
+  }
+  .speak-content > h2 {
+    font-size: 35px;
+  }
+  .guarantee-content > h2 {
+    font-size: 35px;
+  }
+  .guarantee-seo-content > h2 {
+    font-size: 35px;
+  }
+  .br {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .stack-h2 {
+    font-size: 25px;
+  }
+  .child-stack > img {
+    width: 60px;
+    height: 60px;
+  }
+  .child-stack {
+    padding: 5px;
+  }
+  .design_agency-h2 {
+    font-size: 25px;
+    text-align: start;
+  }
+  .ld-playbook-h3 {
+    font-size: 20px;
+  }
+  .trusted-seo-main > h2 {
+    font-size: 25px;
+  }
+  .clc-trusted-seo {
+    font-size: 18px;
+  }
+  .content-just_results > h2 {
+    font-size: 25px;
+  }
+  .content-lantern-way > h2 {
+    font-size: 25px;
+  }
+
+  .child-range-card {
+    width: 100% !important;
+  }
+  .child-range-card-local {
+    width: 100% !important;
+  }
+  .child-counter {
+    max-width: 49% !important;
+    padding-inline: 5px;
+  }
+  .child-counter > span {
+    font-size: 35px;
+  }
+
+  .service-p > p {
+    font-size: 16px;
+  }
+  .partent-counter {
+    gap: 10px !important;
+  }
+  .performance-content {
+    padding: 30px 0px;
+  }
+  .unskippable-content {
+    padding: 30px 0px;
+  }
+  .speak-content {
+    padding: 30px 0px;
+  }
+  .main-speak-div {
+    padding-top: 30px;
+  }
+  .speak-content-child > h3 {
+    font-size: 20px;
+  }
+  .speak-content-child > p {
+    font-size: 16px;
+  }
+  .performance-content > p {
+    font-size: 16px;
+  }
+  .speak-img > img {
+    width: 100px;
+    height: 120px;
+  }
+  .performance-content > h2 {
+    width: 100% !important;
+    font-size: 25px !important;
+  }
+  .unskippable-content > h2 {
+    font-size: 25px;
+  }
+  .unskippable-content > p {
+    font-size: 16px;
+  }
+  .speak-content > h2 {
+    font-size: 25px;
+  }
+}

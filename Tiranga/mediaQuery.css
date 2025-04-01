@@ -318,8 +318,8 @@
     width: 50%;
     margin-bottom: 15px;
   }
-  .signup-btn::after {
-    content: " And Get ₹500 Bonus";
+  
+  
     display: inline;
   }
   .cta-buttons {

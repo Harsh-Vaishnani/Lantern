@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaaS Landing Page</title>
+    <!-- Bootstarp CSS Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+        @font-face {
+            font-family: 'satoshi';
+
+            src: url("Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Regular.woff") format('woff');
+
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Satoshi', sans-serif;
+        }
+
+
+        .header {
+            background-image: url("./Fnl_BG_Img.png");
+        }
+
+        .logo>a>img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .nav-content {
+            padding: 10px 0px;
+        }
+
+        .nav-signin {
+            background-color: transparent;
+            border: 1px solid #1B1139;
+            border-radius: 5px;
+            padding: 8px 25px;
+            font-size: 18px;
+            margin-right: 15px;
+        }
+
+        .nav-start {
+            background: linear-gradient(96.79deg, #81BAFF 12.93%, #7FFFDF 114.1%);
+            border: none;
+            border-radius: 5px;
+            padding: 8px 25px;
+            font-size: 18px;
+            height: 50px;
+        }
+
+        @media (max-width:425px) {
+            .nav-signin {
+                display: none;
+            }
+        }
+
+        /* Main CSS Start */
+        /* Hero Section Start */
+
+        .hero-section {
+            padding-top: 50px;
+            padding-bottom: 30px;
+            background-image: url("./Fnl_BG_Img.png");
+        }
+
+        .hero-h2 {
+            font-size: 40px;
+            width: 50%;
+        }
+
+        .hero-h2>h2 {
+            font-size: 50px;
+            font-weight: bold;
+            background: linear-gradient(96.79deg, #81BAFF 12.93%, #7FFFDF 114.1%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .hero-p {
+            width: 40%;
+            color: #8B949E;
+            font-size: 18px;
+            padding-top: 30px;
+        }
+
+        .hero-creditcard>p {
+            text-decoration: underline;
+            font-size: 18px;
+        }
+
+        .hero-btn>button {
+            min-width: 20%;
+            margin-block: 30px;
+            font-size: 25px;
+            line-height: 1;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-h2 {
+                width: 70%;
+                line-height: 20px;
+            }
+
+            .hero-h2>h2 {
+                font-size: 40px;
+            }
+
+            .hero-p {
+                width: 60%;
+                font-size: 17px;
+            }
+
+            .hero-btn>button {
+                width: 30%;
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-h2 {
+                width: 90%;
+            }
+
+            .hero-h2>h2 {
+                font-size: 32px;
+                margin-bottom: 0px;
+            }
+
+            .hero-p {
+                width: 80%;
+                font-size: 16px;
+            }
+
+            .hero-btn>button {
+                width: 50%;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-h2 {
+                width: 95%;
+            }
+
+            .hero-h2>h2 {
+                font-size: 25px;
+            }
+
+            .hero-p {
+                width: 90%;
+                font-size: 15px;
+            }
+
+            .hero-btn>button {
+                width: 70%;
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .hero-creditcard>p {
+                font-size: 12px !important;
+            }
+        }
+
+        .pricing {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 30px;
+            max-width: 1200px;
+        }
+
+        .pricing-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+            min-height: 500px;
+        }
+
+        .pricing-card h2 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .pricing-card p {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .divider {
+            height: 1px;
+            background: #000;
+            margin: 10px 0;
+        }
+
+        .features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            flex-grow: 1;
+        }
+
+        .features li {
+            font-size: 16px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .features li::before {
+            content: "✔";
+            color: black;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(96.79deg, #81BAFF 12.93%, #7FFFDF 114.1%);
+            color: black;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+
+        .sec-pricing {
+            background: linear-gradient(96.79deg, #81BAFF 12.93%, #7FFFDF 114.1%);
+
+        }
+
+        .sec-btn {
+            background-color: white !important;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            color: black;
+        }
+
+        @media (max-width: 1024px) {
+            .pricing {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .pricing-card {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .pricing-card {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .pricing-card {
+                width: 100%;
+            }
+        }
+
+        /* Footer CSS Start */
+
+        .ftr-1>img {
+            width: 70px;
+            height: 70px;
+        }
+
+        .ftr {
+            background: linear-gradient(96.79deg, #81BAFF 12.93%, #7FFFDF 114.1%);
+            padding-block: 50px;
+        }
+
+        .ftr-1>h3 {
+            padding-top: 20px;
+        }
+
+        .ftr-1>p {
+            padding-bottom: 20px;
+        }
+
+        .subcribe-btn {
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+        }
+
+        .ftr-ul>li {
+            padding-bottom: 10px;
+        }
+
+        .ftrdiv-2>h3 {
+            font-size: 20px !important;
+        }
+
+        .ftrdiv-2>h3 {
+            padding-bottom: 10px;
+        }
+
+        @media (max-width: 992px) {
+            .pricing {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .pricing-card {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+
+            .ftr .d-flex {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .ftrdiv-2 {
+                margin-top: 20px;
+            }
+
+            .lst-ftr-div {
+                display: none;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .pricing-card {
+                width: 90%;
+                padding: 15px;
+            }
+
+            .pricing-card h2 {
+                font-size: 20px;
+            }
+
+            .pricing-card p {
+                font-size: 14px;
+            }
+
+            .features li {
+                font-size: 14px;
+            }
+
+            .btn {
+                font-size: 16px;
+                padding: 10px;
+            }
+
+            .ftr {
+                padding-block: 30px;
+            }
+
+            .ftr-1>img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .ftr-1>h3 {
+                font-size: 18px;
+            }
+
+            .ftr-1>p {
+                font-size: 14px;
+            }
+
+            .subcribe-btn {
+                font-size: 14px;
+                padding: 8px 16px;
+
+            }
+
+            .ftr-ul {
+                padding-left: 0;
+            }
+
+            .ftr-ul>li {
+                font-size: 14px;
+            }
+        }
+
+        .pricing-card {
+            transition: all 0.3s ease-in-out;
+
+        }
+
+        .pricing-card:hover {
+            box-shadow: none;
+            transform: translateY(-5px);
+        }
+
+        .sec-pricing:hover {
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="container">
+            <div class="nav-content d-flex justify-content-between">
+                <div class="logo">
+                    <a href="#"><img src="./Logo.png" alt=""></a>
+                </div>
+                <div class="align-content-center">
+                    <button class="nav-signin">Sign in</button>
+                    <button class="nav-start">Start for Free ➜</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div>
+        <section class="hero-section">
+            <div class="hero-h2 text-center m-auto">
+                <h2>You've Written Your ESG Loom</h2>
+                <h2>Documents. </h2>
+                <h2>Now, Put Them to Work</h2>
+            </div>
+            <div class="hero-p text-center m-auto">
+                <p>Stop recreating the wheel. Generate (reports, answer inquiries, tender responses, management
+                    update)
+                    automatically from your existing esg policies, SOPs, and esg summaries</p>
+            </div>
+            <div class="align-content-center text-center hero-btn">
+                <button class="nav-start">Start for Free ➜</button>
+            </div>
+            <div class="hero-creditcard text-center">
+                <p style="font-size: 12px;">No Credit Card Required</p>
+            </div>
+        </section>
+
+        <section class="pricing m-auto ">
+            <div class="pricing-card">
+                <h2>Pricing</h2>
+                <p>$29/mo</p>
+                <div class="divider"></div>
+                <ul class="features">
+                    <li>Keyword optimization</li>
+                    <li>Automated meta tags</li>
+                    <li>SEO monitoring</li>
+                    <li>Monthly reports</li>
+                </ul>
+                <button class="btn">Join waitlist</button>
+            </div>
+
+            <div class="pricing-card sec-pricing">
+                <h2>Pro</h2>
+                <p>$79/mo</p>
+                <div class="divider"></div>
+                <ul class="features">
+                    <li>Keyword optimization</li>
+                    <li>Automated meta tags</li>
+                    <li>SEO monitoring</li>
+                    <li>Monthly reports</li>
+                    <li>Content suggestions</li>
+                    <li>Link optimization</li>
+                </ul>
+                <button class=" sec-btn">Join waitlist</button>
+            </div>
+
+            <div class="pricing-card">
+                <h2>Business</h2>
+                <p>$129/mo</p>
+                <div class="divider"></div>
+                <ul class="features">
+                    <li>Keyword optimization</li>
+                    <li>Automated meta tags</li>
+                    <li>SEO monitoring</li>
+                    <li>Monthly reports</li>
+                    <li>Content suggestions</li>
+                    <li>Link optimization</li>
+                    <li>Multi-user access</li>
+                    <li>API integration</li>
+                </ul>
+                <button class="btn">Join waitlist</button>
+            </div>
+        </section>
+        </main>
+
+        <footer class="ftr">
+            <div class="container">
+                <div class="d-flex justify-content-evenly">
+                    <div class="ftr-1">
+                        <img src="./Logo.png" alt="">
+                        <h3>Subscribe to our newsletter</h3>
+                        <p>Get product updates, company news, and more.</p>
+                        <button class="subcribe-btn">Subscribe</button>
+                    </div>
+                    <div class="ftrdiv-2 align-content-center">
+                        <h3>Quick Links</h3>
+                        <ul class="p-0 ftr-ul">
+                            <a href="" style="text-decoration: none; color: black;">
+                                <li class="list-unstyled">About us</li>
+                            </a>
+                            <a href="" style="text-decoration: none; color: black;">
+                                <li class="list-unstyled">Features</li>
+                            </a>
+                            <a href="" style="text-decoration: none; color: black;">
+                                <li class="list-unstyled">Pricing</li>
+                            </a>
+                            <a href="" style="text-decoration: none; color: black;">
+                                <li class="list-unstyled">Blogs</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="ftrdiv-2 lst-ftr-div align-content-center">
+                        <h3>Quick Links</h3>
+                        <ul class="p-0 ftr-ul">
+                            <a href="" style="text-decoration: none; color: black;">
+                                <li class="list-unstyled">About us</li>
+                            </a>
+                            <a href="" style="text-decoration: none; color: black;">
+                                <li class="list-unstyled">Features</li>
+                            </a>
+                            <a href="" style="text-decoration: none; color: black;">
+                                <li class="list-unstyled">Pricing</li>
+                            </a>
+                            <a href="" style="text-decoration: none; color: black;">
+                                <li class="list-unstyled">Blogs</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="ftrdiv-2 lst-ftr-div align-content-center">
+                        <h3>Quick Links</h3>
+                        <ul class="p-0 ftr-ul">
+                            <a href="" style="text-decoration: none; color: black;">
+                                <li class="list-unstyled">About us</li>
+                            </a>
+                            <a href="" style="text-decoration: none; color: black;">
+                                <li class="list-unstyled">Features</li>
+                            </a>
+                            <a href="" style="text-decoration: none; color: black;">
+                                <li class="list-unstyled">Pricing</li>
+                            </a>
+                            <a href="" style="text-decoration: none; color: black;">
+                                <li class="list-unstyled">Blogs</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+</body>
+
+</html>
+<!-- Bootstarp JS Link -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>

@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galact Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @font-face {
+            font-family: 'MyCustomFont';
+            src: url('../Galact/sofia-pro/Sofia-Pro-Black-Az.otf') format('opentype'),
+                url('../Galact/sofia-pro/Sofia-Pro-Light-Az.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'MyCustomFont', sans-serif;
+        }
+
+
+        .did-you-know {
+            background-image: url("./Hero_Image.png");
+            width: 100%;
+            height: auto;
+            background-size: cover;
+            margin-bottom: 20px;
+            background-repeat: no-repeat;
+        }
+
+
+        .container {
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        .div-1 {
+            background-color: #F23884CC;
+            width: 40%;
+            height: auto;
+            padding: 15px;
+            text-align: center;
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 18px;
+        }
+
+        .div-1-main {
+            width: 50%;
+            padding: 30px 0px 30px 0px;
+        }
+
+        .div-2 {
+            color: white;
+            font-size: 35px;
+            margin-bottom: 18px;
+        }
+
+        .div-3 {
+            color: white;
+            font-size: 18px;
+            margin-bottom: 18px;
+        }
+
+        .div-4 {
+            color: #FFE500;
+            font-size: 18px;
+            margin-bottom: 18px;
+        }
+
+        .div-1-accordian {
+            background-color: white;
+            display: flex;
+            width: 48%;
+            align-items: center;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            margin-bottom: 5px;
+        
+        }
+
+        .parent-accordian {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .div-1-content {
+            padding-left: 15px;
+            height: auto;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .div-1-accordian.active .div-1-content {
+            max-height: 80px;
+            padding: 5px 0;
+
+        }
+
+        .arrow {
+            font-size: 18px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .div-1-accordian.active .arrow {
+            transform: rotate(180deg);
+        }
+
+        .last-accordian {
+            width: 100%;
+        }
+
+        .content-p-div-1 {
+            color: white;
+            font-size: 22px;
+            padding-bottom: 30px;
+        }
+
+        .main-accordian {
+            gap: 20px;
+            display: grid;
+        }
+
+        @media (max-width: 768px) {
+            .div-1-main {
+                width: 100%;
+                padding: 20px 0;
+            }
+
+            .div-1 {
+                width: 80%;
+                margin: 0 auto 15px;
+            }
+
+            .div-2,
+            .div-3,
+            .div-4 {
+                font-size: 28px;
+                text-align: center;
+            }
+
+            .main-accordian {
+                gap: 15px;
+            }
+
+            .parent-accordian {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .div-1-accordian {
+                width: 90%;
+                flex-direction: column;
+                text-align: center;
+                padding: 15px;
+            }
+
+            .div-1-content {
+                padding-left: 0;
+                margin-top: 10px;
+            }
+
+            .content-p-div-1 {
+                font-size: 18px;
+                text-align: center;
+                padding: 0 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .div-1 {
+                width: 90%;
+                padding: 10px;
+            }
+
+            .div-2,
+            .div-3,
+            .div-4 {
+                font-size: 20px;
+            }
+
+            .div-1-accordian {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .content-p-div-1 {
+                font-size: 16px;
+                padding: 15px 10px;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .div-1 {
+                width: 100%;
+                font-size: 18px;
+            }
+
+            .div-2,
+            .div-3,
+            .div-4 {
+                font-size: 20px;
+            }
+
+            .div-1-accordian {
+                width: 100%;
+                padding: 8px;
+                flex-direction: column;
+            }
+
+            .div-1-content p {
+                font-size: 16px;
+            }
+
+            .content-p-div-1 {
+                font-size: 14px;
+                padding: 0 5px;
+            }
+        }
+
+        /* Diet Section CSS Start */
+        .diet-section {
+            margin-bottom: 20px;
+        }
+
+        .parent-diet-section {
+            display: flex;
+            background-color: #F23884;
+            padding: 30px 0px;
+        }
+
+        .div-1-diet {
+            width: 50%;
+        }
+
+        .div-1-diet>img {
+            width: 100%;
+            height: 70vh;
+            object-fit: contain;
+        }
+
+        .div-1-diet-content {
+            align-content: center;
+            text-align: center;
+            width: 50%;
+            padding: 20px 40px;
+        }
+
+        .div-1-diet-content>h2 {
+            font-size: 52px;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .div-1-diet-content>p {
+            font-size: 22px;
+            color: white;
+
+        }
+
+        @media (max-width: 1024px) {
+            .div-1-diet-content {
+                padding: 20px;
+            }
+
+            .div-1-diet-content>h2 {
+                font-size: 42px;
+            }
+
+            .div-1-diet-content>p {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .parent-diet-section {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .div-1-diet {
+                width: 100%;
+            }
+
+            .div-1-diet-content {
+                width: 100%;
+                padding: 15px;
+            }
+
+            .div-1-diet-content>h2 {
+                font-size: 36px;
+            }
+
+            .div-1-diet-content>p {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .div-1-diet-content>h2 {
+                font-size: 28px;
+            }
+
+            .div-1-diet-content>p {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .div-1-diet-content {
+                padding: 10px;
+            }
+
+            .div-1-diet-content>h2 {
+                font-size: 22px;
+            }
+
+            .div-1-diet-content>p {
+                font-size: 14px;
+            }
+        }
+
+
+
+        .nutrition_powder {
+            background-color: #D7F5FF;
+            margin-bottom: 20px;
+        }
+
+        .div-1-powder {
+            width: 50%;
+            align-content: center;
+            color: #1252A4;
+        }
+
+        .div-1-powder>h2 {
+            font-size: 52px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .div-1-powder>h3 {
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-style: italic;
+            color: #001025;
+        }
+
+        .div-1-powder>p {
+            font-size: 20px;
+            color: #001025B2;
+            line-height: 30px;
+            color: #001025;
+        }
+
+        .parent-nutrition_powder {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .div-1-powder-img>img {
+            height: 70vh;
+        }
+
+        @media (max-width: 1024px) {
+            .div-1-powder {
+                width: 60%;
+            }
+
+            .div-1-powder>h2 {
+                font-size: 42px;
+            }
+
+            .div-1-powder>h3 {
+                font-size: 18px;
+            }
+
+            .div-1-powder>p {
+                font-size: 18px;
+                line-height: 28px;
+            }
+
+            .div-1-powder-img>img {
+                height: 60vh;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .parent-nutrition_powder {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .div-1-powder {
+                width: 100%;
+                padding: 20px;
+            }
+
+            .div-1-powder-img>img {
+                height: 50vh;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .div-1-powder>h2 {
+                font-size: 32px;
+            }
+
+            .div-1-powder>h3 {
+                font-size: 16px;
+            }
+
+            .div-1-powder>p {
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            .div-1-powder-img>img {
+                height: 40vh;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .div-1-powder {
+                padding: 10px;
+            }
+
+            .div-1-powder>h2 {
+                font-size: 24px;
+            }
+
+            .div-1-powder>h3 {
+                font-size: 14px;
+            }
+
+            .div-1-powder>p {
+                font-size: 14px;
+                line-height: 22px;
+            }
+
+            .div-1-powder-img>img {
+                height: 35vh;
+            }
+        }
+
+        .Power-Packed {
+            margin-bottom: 20px;
+        }
+
+        .Power-Packed-1 {
+            width: 40%;
+            align-content: center;
+        }
+
+        .Power-Packed-1>h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .Power-Packed-1>p {
+            font-size: 20px;
+            margin-bottom: 15px;
+            line-height: 30px;
+            color: #001025;
+        }
+
+        .img-Packed-main-1 {
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        .img-Packed {
+            padding-right: 10px;
+        }
+
+        .img-Packed>img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .main-power-packed {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .Power-Packed-2 {
+            width: 50%;
+        }
+
+        .Power-Packed-2>img {
+            width: 100%;
+            height: 80vh;
+            object-fit: contain;
+        }
+
+        .Power-Packed-2 {
+            align-content: center;
+        }
+
+        .content-power-child {
+            align-content: center;
+        }
+
+        .content-power-child>p {
+            color: #001025;
+            font-size: 17px;
+        }
+
+        .h3-lst-power {
+            font-size: 20px;
+        }
+
+        @media (max-width: 1024px) {
+            .main-power-packed {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .Power-Packed-1,
+            .Power-Packed-2 {
+                width: 100%;
+            }
+
+            .Power-Packed-2>img {
+                height: 60vh;
+            }
+
+            .Power-Packed-1>h2 {
+                font-size: 36px;
+            }
+
+            .Power-Packed-1>p {
+                font-size: 18px;
+                line-height: 28px;
+            }
+
+            .img-Packed-main-1 {
+                justify-content: start;
+                flex-wrap: wrap;
+            }
+
+            .content-power-child {
+                text-align: start;
+            }
+
+            .img-Packed>img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .content-power-child>p {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .Power-Packed-2>img {
+                height: 50vh;
+            }
+
+            .Power-Packed-1>h2 {
+                font-size: 32px;
+            }
+
+            .Power-Packed-1>p {
+                font-size: 16px;
+            }
+
+            .h3-lst-power {
+                font-size: 18px;
+            }
+
+            .img-Packed>img {
+                width: 35px;
+                height: 35px;
+            }
+
+            .content-power-child>h3 {
+                font-size: 18px;
+            }
+
+            .content-power-child>p {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .Power-Packed-2>img {
+                height: 40vh;
+            }
+
+            .Power-Packed-1>h2 {
+                font-size: 28px;
+            }
+
+            .Power-Packed-1>p {
+                font-size: 14px;
+            }
+
+            .h3-lst-power {
+                font-size: 16px;
+                padding-bottom: 15px;
+            }
+
+            .img-Packed-main-1 {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .img-Packed>img {
+                width: 30px;
+                height: 30px;
+            }
+
+            .content-power-child {
+                text-align: center;
+            }
+
+            .content-power-child>h3 {
+                font-size: 16px;
+            }
+
+            .content-power-child>p {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .Power-Packed-2>img {
+                height: 35vh;
+            }
+
+            .Power-Packed-1>h2 {
+                font-size: 24px;
+            }
+
+            .Power-Packed-1>p {
+                font-size: 12px;
+            }
+
+            .h3-lst-power {
+                font-size: 14px;
+            }
+
+            .img-Packed>img {
+                width: 25px;
+                height: 25px;
+            }
+
+            .content-power-child>h3 {
+                font-size: 14px;
+            }
+
+            .content-power-child>p {
+                font-size: 10px;
+            }
+        }
+
+
+        .plus-content-1 {
+            text-align: center;
+        }
+
+        .plus-content-1>h2 {
+            width: 48%;
+            margin: auto;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .plus-content-1>p {
+            width: 48%;
+            margin: auto;
+            font-size: 20px;
+        }
+
+        .child_plus_Nutrition_1 {
+            width: 100%;
+            padding-bottom: 20px;
+        }
+
+        .child_plus_Nutrition_1>h2 {
+            font-size: 50px;
+            text-align: center;
+            color: #1252A4;
+        }
+
+        .child_plus_Nutrition_1>p {
+            text-align: center;
+            color: #1252A4;
+
+        }
+
+        .child_plus_Nutrition_1>img {
+            width: 100%;
+            padding-top: 15px;
+        }
+
+        .main-plus-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .child_plus_2>img {
+            height: 70vh;
+        }
+
+        .Galact_Plus_Nutrition {
+            background-color: #CAE1FF;
+            padding: 30px 0px;
+        }
+
+        .Disclaimer {
+            text-align: center;
+        }
+
+        .Disclaimer>span {
+            color: #F23884;
+        }
+
+        /* Default styles already provided in the code */
+
+        /* Media Queries for Responsiveness */
+
+        /* Tablets and Medium Screens (max-width: 1024px) */
+        @media screen and (max-width: 1024px) {
+
+            .plus-content-1>h2,
+            .plus-content-1>p {
+                width: 70%;
+                margin-bottom: 15px;
+            }
+
+            .child_plus_Nutrition_1>h2 {
+                font-size: 40px;
+            }
+
+            .main-plus-content {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .child_plus_2>img {
+                height: 50vh;
+            }
+
+            .child_plus_Nutrition_1 {
+                width: 80%;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .plus-content-1>h2,
+            .plus-content-1>p {
+                width: 90%;
+                font-size: 18px;
+            }
+
+            .main-plus-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .plus-content-1>h2 {
+                font-size: 30px;
+            }
+
+            .main-plus-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .child_plus_2>img {
+                height: 60vh;
+            }
+
+            .child_plus_Nutrition_1 {
+                width: 100%;
+                text-align: center;
+            }
+
+            .child_plus_Nutrition_1>h2 {
+                font-size: 40px;
+            }
+
+            .child_plus_Nutrition_1>p {
+                font-size: 16px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .plus-content-1>h2 {
+                font-size: 24px;
+            }
+
+            .plus-content-1>p {
+                font-size: 16px;
+            }
+
+            .child_plus_Nutrition_1>h2 {
+                font-size: 30px;
+            }
+
+            .child_plus_Nutrition_1>p {
+                font-size: 14px;
+            }
+
+            .child_plus_2>img {
+                height: auto;
+                max-width: 100%;
+            }
+
+            .Disclaimer {
+                font-size: 14px;
+                padding: 0 10px;
+            }
+        }
+
+        .choco-1 {
+            width: 40%;
+        }
+
+        .frs-choco-content {
+            align-content: center;
+        }
+
+        .frs-choco-div {
+            display: flex;
+        }
+
+        .frs-choco-img>img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .frs-choco-content>p {
+            width: 60%;
+        }
+
+        .choco-2>img {
+            height: 70vh;
+            object-fit: contain;
+        }
+
+        .main-choco {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 0px 0px 0px;
+        }
+
+        .choco-1 {
+            align-content: center;
+        }
+
+        .choco-2 {
+            align-content: center;
+        }
+
+        .choco-1>h2 {
+            color: #F23884;
+            width: 100%;
+            line-height: 50px;
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .choco-1>p {
+            color: #1252A4;
+            width: 100%;
+            line-height: 25px;
+            font-size: 19px;
+            margin-bottom: 15px;
+        }
+
+        .choco-step>h3 {
+            font-size: 20px;
+            color: #001025;
+            margin-bottom: 15px;
+        }
+
+        .frs-choco-content>p {
+            color: #1252A4;
+            font-weight: bold;
+            padding-left: 10px;
+        }
+
+        .frs-choco-div {
+            margin-bottom: 10px;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .main-choco {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .choco-1,
+            .choco-2 {
+                width: 80%;
+            }
+
+            .choco-1>h2 {
+                font-size: 32px;
+                line-height: 40px;
+            }
+
+            .choco-1>p {
+                font-size: 18px;
+            }
+
+            .choco-2>img {
+                height: 50vh;
+                width: 100%;
+            }
+
+            .frs-choco-content>p {
+                width: 100%;
+                font-size: 16px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .choco-1,
+            .choco-2 {
+                width: 100%;
+                text-align: center;
+            }
+
+            .choco-1>h2 {
+                font-size: 28px;
+            }
+
+            .choco-1>p {
+                font-size: 16px;
+            }
+
+            .choco-2>img {
+                height: auto;
+                max-width: 100%;
+            }
+
+            .frs-choco-div {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .frs-choco-img>img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .frs-choco-content>p {
+                font-size: 14px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .choco-1>h2 {
+                font-size: 24px;
+                line-height: 35px;
+            }
+
+            .choco-1>p {
+                font-size: 14px;
+            }
+
+            .choco-step>h3 {
+                font-size: 18px;
+            }
+
+            .frs-choco-img>img {
+                width: 35px;
+                height: 35px;
+            }
+
+            .frs-choco-content>p {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="did-you-know">
+        <div class="container">
+            <div class="div-1-main">
+                <div class="div-1">
+                    <h2>Did you know?</h2>
+                </div>
+                <div class="div-2">
+                    <p>Your body’s nutrient needs increases significantly during pregnancy?</p>
+                </div>
+                <div class="div-3">
+                    <p>You’re not just eating for two—you’re nourishing two lives!</p>
+                </div>
+                <div class="div-4">
+                    <p>From growing a tiny heart to forming strong little bones, your body is working overtime. That’s
+                        why your nutrient requirements go up during pregnancy</p>
+                </div>
+                <div class="main-accordian">
+                    <div class="parent-accordian">
+                        <div class="div-1-accordian">
+                            <div>
+                                <img src="./Group 128.png" alt="">
+                            </div>
+                            <div class="div-1-content">
+                                <p><b>Protein</b></p>
+                                <p>Your body needs 55-68 gm daily for muscle growth.</p>
+                            </div>
+                           
+                        </div>
+
+                        <div class="div-1-accordian">
+                            <div>
+                                <img src="./Group 128.png" alt="">
+                            </div>
+                            <div class="div-1-content">
+                                <p><b>Magnesium</b></p>
+                                <p>Increases to 440mg—essential for nerve function.</p>
+                            </div>
+                           
+                        </div>
+                    </div>
+
+                    <div class="parent-accordian">
+                        <div class="div-1-accordian">
+                            <div>
+                                <img src="./Group 128.png" alt="">
+                            </div>
+                            <div class="div-1-content">
+                                <p><b>Zinc</b></p>
+                                <p>Boosts immunity and speeds up wound healing.</p>
+                            </div>
+                           
+                        </div>
+
+                        <div class="div-1-accordian">
+                            <div>
+                                <img src="./Group 128.png" alt="">
+                            </div>
+                            <div class="div-1-content">
+                                <p><b>Iodine</b></p>
+                                <p>Supports thyroid function and hormone balance.</p>
+                            </div>
+                           
+                        </div>
+                    </div>
+
+                    <div class="parent-accordian">
+                        <div class="div-1-accordian last-accordian">
+                            <div>
+                                <img src="./Group 128.png" alt="">
+                            </div>
+                            <div class="div-1-content">
+                                <p><b>Folate</b></p>
+                                <p>A must at 570µg for red blood cell formation.</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <p class="content-p-div-1">Similarly, the nutrientSimilary, thenutrient intake requirement of many nutrients
+                like Vitamin A, Vitamin C, Vitamin B12, Niacin etc. goes up during pregnancy. intake requirement of many
+                nutrients goes up during pregnancy like Vitamin A, Vitamin C, Vitamin B12, Niacin etc.</p>
+        </div>
+    </section>
+
+    <section class="diet-section">
+        <div class="parent-diet-section">
+            <div class="div-1-diet">
+                <img src="./shutterstock_2051166686 [Converted] 1.png" alt="">
+            </div>
+            <div class="div-1-diet-content">
+                <h2>Can your daily diet meets increased nutrient needs during pregnancy?</h2>
+                <p>Maybe not. But that’s where Galact Plus Nutrition Powder comes in—your all-in-one pregnancy super
+                    fuel!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="nutrition_powder">
+        <div class="container">
+            <div class="parent-nutrition_powder">
+                <div class="div-1-powder">
+                    <h2>Galact Plus </h2>
+                    <h2> nutrition powder</h2>
+                    <h3>Your Daily Dose of Strength, Nourishment & Love</h3>
+                    <p>Growing a baby is hard work, but you deserve to feel strong, energized, and supported every step
+                        of the way. Galact Plus Nutrition Powder is packed with essential nutrients that cater to your
+                        body’s increased demands—so you can focus on enjoying your pregnancy!</p>
+                </div>
+                <div class="div-1-powder-img">
+                    <img src="./Group 192.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="Power-Packed">
+        <div class="container main-power-packed">
+            <div class="Power-Packed-1">
+                <h2>Power-Packed with 25+ vital nutrients that matter the most</h2>
+                <p>Each scoop of Galact Plus Nutrition Powder is carefully designed to nourish both you and your baby.
+                </p>
+                <div class="img-Packed-main-1">
+                    <div class="img-Packed">
+                        <img src="./Group 145.png" alt="">
+                    </div>
+                    <div class="content-power-child">
+                        <h3>Calcium & Vitamin D </h3>
+                        <p>Strengthen mother's bones, supports baby's bone and teeth formation</p>
+                    </div>
+                </div>
+                <div class="img-Packed-main-1">
+                    <div class="img-Packed">
+                        <img src="./Group 144.png" alt="">
+                    </div>
+                    <div class="content-power-child">
+                        <h3>Vitamin A, C & Zinc</h3>
+                        <p>Strengthen your immune system to keep you feeling your best</p>
+                    </div>
+                </div>
+                <div class="img-Packed-main-1">
+                    <div class="img-Packed">
+                        <img src="./Group 143.png" alt="">
+                    </div>
+                    <div class="content-power-child">
+                        <h3>Iron & B Vitamins</h3>
+                        <p>Fight fatigue and keep your energy levels high</p>
+                    </div>
+                </div>
+                <div class="img-Packed-main-1">
+                    <div class="img-Packed">
+                        <img src="./Group 141.png" alt="">
+                    </div>
+                    <div class="content-power-child">
+                        <h3>DHA & Choline</h3>
+                        <p>Support your baby’s brain, eye, and nervous system development</p>
+                    </div>
+                </div>
+                <div class="img-Packed-main-1">
+                    <div class="img-Packed">
+                        <img src="./Group 146.png" alt="">
+                    </div>
+                    <div class="content-power-child">
+                        <h3>Prebiotics (FOS)</h3>
+                        <p>Improve digestion and nutrient absorption, so you feel light and comfortable.</p>
+                    </div>
+                </div>
+                <h3 class="h3-lst-power">Every sip is a step towards a stronger you and a healthier baby.</h3>
+            </div>
+            <div class="Power-Packed-2">
+                <img src="./Mask group-11.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="Galact_Plus_Nutrition">
+        <div class="container">
+            <div class="plus-content-1">
+
+                <h2>How Much Nutrition Do You Get with
+                    Galact Plus Nutrition Powder?</h2>
+                <p>Just 3 servings a day of Galact Plus Nutrition Powder can help you meet your daily pregnancy
+                    requirements. Here’s what it provides</p>
+            </div>
+            <div class="main-plus-content">
+                <div>
+                    <div class=" child_plus_Nutrition_1">
+                        <h2>>50%</h2>
+                        <p>of Vitamin A, B3, B6, C, E, and K1 Supports </p>
+                        <p>mom's eye health, immunity and nausea relief</p>
+                        <img src="./four.png" alt="">
+                    </div>
+                    <div class="child_plus_Nutrition_1">
+                        <h2>50%</h2>
+                        <p>Iodine </p>
+                        <p>Supports healthy birth weight</p>
+                        <img src="./one.png" alt="">
+                    </div>
+                </div>
+                <div class="child_plus_2">
+                    <img src="./Group 196.png" alt="">
+                </div>
+                <div>
+                    <div class="child_plus_Nutrition_1">
+                        <h2>60%</h2>
+                        <p>Iron</p>
+                        <p>Boosts energy levels</p>
+                        <img src="./three.png" alt="">
+                    </div>
+                    <div class=" child_plus_Nutrition_1">
+                        <h2>80%</h2>
+                        <p>Calcium </p>
+                        <p>helps strengthen mom's bones, support baby's bone formation</p>
+                        <img src="./two.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <p class="Disclaimer"><span>Disclaimer:</span>
+                Based on daily recommended dosage of 3 servings per day
+                Refer product label for dosages, recommended daily servings and for RDA details</p>
+        </div>
+    </section>
+
+    <section class="choco-section">
+        <div class="container">
+            <div class="main-choco">
+                <div class="choco-1">
+                    <h2>Delicious Choco Hazelnut Flavor
+                        A Treat for Mom & Baby!</h2>
+                    <p>Who said nutrition has to be boring? With Choco Hazelnut Flavor, every sip feels like an
+                        indulgence.
+                        Rich, creamy, and oh-so-satisfying, it’s the perfect way to nourish and pamper yourself every
+                        day.
+                    <div class="choco-step">
+                        <h3>Steps to consume</h3>
+                        <div class="frs-choco-div">
+                            <div class="frs-choco-img">
+                                <img src="./Group 175.png" alt="">
+                            </div>
+                            <div class="frs-choco-content">
+                                <p>Add 1 scoop of
+                                    Galact Plus Nutrition Powder to a glass of warm or chilled milk (200ml)</p>
+                            </div>
+                        </div>
+                        <div class="frs-choco-div">
+                            <div class="frs-choco-img">
+                                <img src="./Group 173.png" alt="">
+                            </div>
+                            <div class="frs-choco-content">
+                                <p>Stir well and turn your milk into a nourishing, chocolatey treat!</p>
+                            </div>
+                        </div>
+                        <div class="frs-choco-div">
+                            <div class="frs-choco-img">
+                                <img src="./Group 174.png" alt="">
+                            </div>
+                            <div class="frs-choco-content">
+                                <p>Sip, savor, and enjoy the rich choco-hazelnut flavor!</p>
+                            </div>
+                        </div>
+                    </div>
+                    </p>
+                </div>
+                <div class="choco-2">
+                    <img src="./Images-1-02.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
+

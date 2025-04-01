@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <style>
+        .swiper-container {
+            width: 95%;
+            margin: auto;
+            margin-top: 10%;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+        }
+
+        .main-love-arth {
+            background-color: black;
+            width: 95%;
+            height: 30vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            position: relative;
+            border-radius: 20px;
+        }
+
+        .child-love-arth {
+            position: absolute;
+            width: 25%;
+            height: 38vh;
+            align-items: start;
+            left: 0%;
+        }
+
+        .child-love-arth>img {
+            width: 100%;
+            height: 38vh;
+            object-fit: contain;
+        }
+
+        .content-love-arth {
+            justify-content: center;
+            margin-left: 13%;
+        }
+
+        .content-love-arth>h4,
+        h5 {
+            color: white;
+        }
+
+        .content-love-arth>img {
+            width: 100px;
+        }
+
+        .content-love-arth>h4 {
+            font-size: 20px;
+        }
+
+        .content-love-arth>h5 {
+            font-size: 16px;
+            color: #B9C8F3;
+        }
+
+        .child-love-arth-bg {
+            position: absolute;
+            background-color: #6080DE;
+            width: 170px;
+            height: 150px;
+            border-radius: 20px;
+            top: -40%;
+            right: 5%;
+            z-index: -999;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="main-love-arth">
+                    <div class="child-love-arth">
+                        <img src="./image.svg" alt="">
+                    </div>
+                    <div class="child-love-arth-bg"></div>
+                    <div class="content-love-arth">
+                        <img src="./Frame 38.svg" alt="">
+                        <span>5.0 rating </span>
+                        <h4>These gummies help me unwind after a long day. Taste is also good. Will definitely repurchase.</h4>
+                        <h5>Sneha</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="main-love-arth">
+                    <div class="child-love-arth">
+                        <img src="./image.svg" alt="">
+                    </div>
+                    <div class="child-love-arth-bg"></div>
+                    <div class="content-love-arth">
+                        <img src="./Frame 38.svg" alt="">
+                        <span>5.0 rating </span>
+                        <h4>I fall asleep faster and stay asleep longer. These gummies really work wonders!👍🏻</h4>
+                        <h5>Shivani</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="main-love-arth">
+                    <div class="child-love-arth">
+                        <img src="./image.svg" alt="">
+                    </div>
+                    <div class="child-love-arth-bg"></div>
+                    <div class="content-love-arth">
+                        <img src="./Frame 38.svg" alt="">
+                        <span>5.0 rating </span>
+                        <h4>I love that these gummies are natural and feel safe for daily use. No worries here!</h4>
+                        <h5>Gaurav</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="main-love-arth">
+                    <div class="child-love-arth">
+                        <img src="./image.svg" alt="">
+                    </div>
+                    <div class="child-love-arth-bg"></div>
+                    <div class="content-love-arth">
+                        <img src="./Frame 38.svg" alt="">
+                        <span>5.0 rating </span>
+                        <h4>These gummies are a great way to unwind at the end of the day. They work fast, and I love how restful my sleep.</h4>
+                        <h5>Madhulika</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+</html>

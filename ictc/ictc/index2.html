@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Form Example</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-OERcA2JDz2F1bU6BZn7EN5Yc6E3wp8Hk54XqgBEHaaEnZn3Cba3q5IKdy1aKZrqe" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container mt-5">
+    <form id="exampleForm" novalidate>
+      <div class="row g-3">
+        <!-- First Name -->
+        <div class="col-md-6">
+          <label for="fullName" class="form-label">First Name*</label>
+          <input type="text" class="form-control" id="fullName" placeholder="Enter your first name" required>
+          <div class="invalid-feedback">
+            Please enter your first name.
+          </div>
+        </div>
+
+        <!-- Last Name -->
+        <div class="col-md-6">
+          <label for="lastName" class="form-label">Last Name*</label>
+          <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" required>
+          <div class="invalid-feedback">
+            Please enter your last name.
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="col-md-6">
+          <label for="email" class="form-label">Email Id*</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email address" required>
+          <div class="invalid-feedback">
+            Please enter a valid email address.
+          </div>
+        </div>
+
+        <!-- Phone Number -->
+        <div class="col-md-6">
+          <label for="phone" class="form-label">Mobile No.*</label>
+          <input type="tel" class="form-control" id="phone" placeholder="Enter your mobile number" required>
+          <div class="invalid-feedback">
+            Please enter a valid phone number.
+          </div>
+        </div>
+      </div>
+
+      <!-- Hidden Field -->
+      <input type="hidden" id="pageTitle">
+
+      <!-- Submit Button -->
+      <div class="mt-4">
+        <button type="submit" class="btn btn-primary w-100">Register Now</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIqYJpgN9FfF64PeC5d6ql6jht0oZ/pU6d65iB/klj8U0kK5m8Q" crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Populate hidden field with page title
+      const pageTitle = document.title;
+      const pageTitleField = document.getElementById('pageTitle');
+      if (pageTitleField) {
+        pageTitleField.value = pageTitle;
+      }
+
+      // Bootstrap validation
+      const form = document.getElementById('exampleForm');
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      });
+    });
+  </script>
+</body>
+</html>
